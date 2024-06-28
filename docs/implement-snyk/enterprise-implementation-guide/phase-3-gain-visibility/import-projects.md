@@ -7,7 +7,7 @@ Depending on the integrations you have configured and the language and package m
 
 The best import route varies based on the languages and package managers in your tech stack.&#x20;
 
-Here are some key points to determine the best starting point. See [Git repositories and CI/CD comparisons](../../../integrate-with-snyk/git-repository-and-ci-cd-integrations-comparisons.md) for more details.
+Here are some key points to determine the best starting point. See [Git repositories and CI/CD comparisons](../../../scm-ide-and-ci-cd-workflow-and-integrations/git-repository-and-ci-cd-integrations-comparisons.md) for more details.
 
 ## Ways to get started with Snyk
 
@@ -19,7 +19,7 @@ Snyk offers various integration methods to meet your needs, as described here.
 
 ### Git integration
 
-You can connect your repositories for automatic scanning. See [Git repositories (SCMs) integrations with Snyk](../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/) for more details.
+You can connect your repositories for automatic scanning. See [Git repositories (SCMs) integrations with Snyk](../../../scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations/) for more details.
 
 For a small number of applications, typically under a hundred, follow these steps.
 
@@ -32,7 +32,7 @@ For a small number of applications, typically under a hundred, follow these step
 
 For hundreds or thousands of repositories, you can use the [Snyk API v1 Import targets endpointI](https://snyk.docs.apiary.io/#reference/import-projects/import/import-targets) to import your Projects. This takes advantage of an existing source control integration and can be used to automate processes.
 
-The [snyk-api-import](../../../snyk-api/snyk-tools/tool-snyk-api-import/) tool uses the API to manage onboarding at scale for large enterprises and is the suggested tool to use at scale. You must mirror the source control structure when using the snyk-api-import tool.
+The [snyk-api-import](../../../scan-using-snyk/snyk-tools/tool-snyk-api-import/) tool uses the API to manage onboarding at scale for large enterprises and is the suggested tool to use at scale. You must mirror the source control structure when using the snyk-api-import tool.
 
 ### Snyk CLI
 

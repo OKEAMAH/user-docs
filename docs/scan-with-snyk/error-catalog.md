@@ -127,7 +127,7 @@ Provide an ORG ID or GROUP ID.
 
 The project could not be found. Check that the project exists, that you have access to the project, and also check that the ID you have provided is the project ID and not a CBI ID.
 
-**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
 
 
 ### [SNYK-CBI-0004](#snyk-cbi-0004)
@@ -274,6 +274,15 @@ An internal error occurred while trying to retrieve the image collection. Try ag
 
 **Help Links:**
 - [https://status.snyk.io/](https://status.snyk.io/)
+
+### [SNYK-CBI-0019](#snyk-cbi-0019)
+
+#### Unable to create versioning schema
+
+The provided versioning schema is invalid and image could therefor not be created. Provide a properly formatted versioning schema and try again.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
 
 ---
 # Code
@@ -508,6 +517,28 @@ The server encountered a critical operation that requires a specific environment
 **HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
 
+### [SNYK-OS-0009](#snyk-os-0009)
+
+#### Brokered connections not currently supported
+
+The service encountered a permissions or credentials error most likely related to an import through a brokered connection for a scanner that does not yet support that.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-OS-0010](#snyk-os-0010)
+
+#### Snyk failed to clone your repository
+
+We encountered a fatal error from Git while trying to clone your code using your provided credentials. Please verify that:
+
+* Your provided credentials are correct or not scoped too narrowly
+* The branch you've asked us to clone exists
+* The repository you've provided is accessible from the internet is you are not connected through a broker
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
 ### [SNYK-OS-DOTNET-0001](#snyk-os-dotnet-0001)
 
 #### Unsupported manifest file type for remediation
@@ -733,6 +764,21 @@ Which will allow Snyk to scan your code using a newer version of the SDK, despit
 - [https://versionsof.net/core/](https://versionsof.net/core/)
 - [https://dotnet.microsoft.com/en-us/download/dotnet](https://dotnet.microsoft.com/en-us/download/dotnet)
 - [https://learn.microsoft.com/en-us/dotnet/core/tools/global-json#rollforward](https://learn.microsoft.com/en-us/dotnet/core/tools/global-json#rollforward)
+
+### [SNYK-OS-DOTNET-0009](#snyk-os-dotnet-0009)
+
+#### Project failed to build due to missing type or namespace references
+
+While attempting to build your solution for scanning, the `dotnet` SDK was unable to restore one or more projects referenced in your manifest files.
+
+Please note that Snyk runs these builds on a **case-sensitive** filesystem, meaning that `<ProjectReference>../src/NS.Project.csproj</ProjectReference>` and `<ProjectReference>../src/ns.project.csproj</ProjectReference>` are not referring to the same thing.
+
+This can present itself as a problem for customers that are using Mac or Windows build pipeline where file systems are not case-sensitive. In this case, verify you're referring to the right manifest files and check the Snyk import logs for more details.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references)
 
 ### [SNYK-OS-GO-0001](#snyk-os-go-0001)
 
@@ -1180,6 +1226,42 @@ In some cases, it may be necessary to delete the node_modules folder and the pnp
 The lockfile version is not supported. Supported lockfile versions for pnpm include v5 and v6.
 
 **HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
+### [SNYK-OS-NODEJS-0019](#snyk-os-nodejs-0019)
+
+#### Yarn package not found
+
+Snyk could not find the package in the Yarn registry.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-OS-NODEJS-0020](#snyk-os-nodejs-0020)
+
+#### Unable to reach package registry
+
+Snyk could not reach the node package registry.
+
+**HTTP Status:** [503](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503)
+
+
+### [SNYK-OS-NODEJS-0021](#snyk-os-nodejs-0021)
+
+#### Lock file is outdated
+
+The lock file is outdated. Update the lock file and try again.
+
+**HTTP Status:** [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409)
+
+
+### [SNYK-OS-NODEJS-0022](#snyk-os-nodejs-0022)
+
+#### Unable to read from remote repository
+
+Snyk does not have sufficient permissions to access the repository, or the repository does not exist.
+
+**HTTP Status:** [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401)
 
 
 ### [SNYK-OS-PYTHON-0001](#snyk-os-python-0001)
@@ -2007,4 +2089,4 @@ Could not render default PR template.
 **Help Links:**
 - [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
 
---- Generated at 2024-06-05T09:11:37.301Z
+--- Generated at 2024-06-26T19:06:10.158Z

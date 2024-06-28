@@ -12,7 +12,7 @@ A benefit of adding tests to your pipeline is that you do not need to import the
 
 When adding Snyk to a build pipeline, there are common options:&#x20;
 
-* Using the specific [pipeline integration](../../../integrate-with-snyk/snyk-ci-cd-integrations/) for your tool.
+* Using the specific [pipeline integration](../../../scm-ide-and-ci-cd-workflow-and-integrations/snyk-ci-cd-integrations/) for your tool.
 * Using the [Snyk CLI](../../../snyk-cli/) and running the specific commands directly.&#x20;
 
 Each option has benefits; using an existing pipeline integration may be faster and easier to configure, but using the Snyk CLI will give you a greater range of options and flexibility in your fail criteria.&#x20;
@@ -23,7 +23,7 @@ When you run a test in your pipeline, you can use filters to determine what woul
 
 ## CLI supporting tools
 
-When you use the Snyk CLI in your pipeline, you can use a range of supporting [Snyk Tools](../../../snyk-api/snyk-tools/) that provide additional functionality, including:
+When you use the Snyk CLI in your pipeline, you can use a range of supporting [Snyk Tools](../../../scan-using-snyk/snyk-tools/) that provide additional functionality, including:
 
 * [snyk-delta](https://docs.snyk.io/snyk-api/other-tools/tool-snyk-delta), which can be used to compare two sets of results and identify new vulnerabilities, similar to how the PR Checks feature tests for new vulnerabilities only
 * [snyk-filter](https://docs.snyk.io/snyk-api/other-tools/tool-snyk-filter), which can be used for more complex fail criteria, such as `fail if more than three High severity vulnerabilities are found`.

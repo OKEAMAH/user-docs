@@ -1,12 +1,15 @@
 # Connect a third-party integration
 
 {% hint style="warning" %}
-The third-party integrations are available in a Closed Beta state and are applicable only to the Snyk AppRisk Pro version.  Please contact your salesperson if you are interested in Snyk AppRisk Pro.
-
-The ServiceNow CMDB integration is available for both Snyk AppRisk Essentials and Snyk AppRisk Pro plans.
+**Release status**\
+The third-party integrations are available in Closed Beta and are applicable only to the Snyk AppRisk Pro version. Contact your salesperson if you are interested in Snyk AppRisk Pro.
 {% endhint %}
 
 The Integrations page shows all active integrations, including data from your existing Snyk Organizations that is automatically synced and provides access to the Integration Hub.
+
+{% hint style="info" %}
+The Loaded package risk factor is not supported by Snyk for open-source packages, only for application packages such as npm, Maven, or PyPI.
+{% endhint %}
 
 You can customize your AppRisk integrations from the **Integrations Hub** where the following SAST and Secrets integrations are available:
 
@@ -29,10 +32,6 @@ Runtime:
 ITSM:
 
 * [Jira](connect-a-third-party-integration.md#jira-setup-guide)
-
-App Context:
-
-* [ServiceNow CMDB](connect-a-third-party-integration.md#servicenow-cmdb-setup-guide)
 
 {% hint style="info" %}
 Data synchronization may take up to two hours after receiving the **Connected** status from a new integration setup.
@@ -80,6 +79,7 @@ Snyk AppRisk Pro does not currently support the Checkmarx One integration.
 ### Prerequisites <a href="#checkmarx-prerequisites" id="checkmarx-prerequisites"></a>
 
 * Install and configure your [Snyk Broker](../../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md#checkmarx-sast-integration) connection for Snyk AppRisk.&#x20;
+* Ensure you have properly used Git Setting for your Checkmarx Project based on the Checkmarx [documentation](https://checkmarx.stoplight.io/docs/checkmarx-sast-api-reference-guide/8312d35369b9b-set-project-s-remote-source-settings-as-git).
 
 ### Required parameters <a href="#checkmarx-required-parameters" id="checkmarx-required-parameters"></a>
 
@@ -230,14 +230,14 @@ The following table presents the functionality of all types of Jira integrations
 
 * Use Dynatrace SaaS on the DPS licensing model.
 * The Dynatrace [Kubernetes app](https://docs.dynatrace.com/docs/platform-modules/infrastructure-monitoring/container-platform-monitoring/kubernetes-app/overview) is configured to monitor at least one cluster.
-* API token from a user with permissions to query entity model.
+* The user is associated with a group that has permissions (through policies) to query the entity model. In the Dynayrace policy, set the following permission: `storage:entities:read`.
 
 Comply with the following steps before integrating Dynatrace with Snyk AppRisk:
 
 1. Retrieve the `account-uuid` from your Dynatrace account. Navigate to [https://myaccount.dynatrace.com/accounts](https://myaccount.dynatrace.com/accounts) and select the account whose environment you want to integrate into Snyk. Identify the `account-uuid` in the URL and save it for later use.
-2. Ensure you have OneAgent deployed in your Kubernetes environment. Navigate to `Settings` -> `Environments` and select the environment you want to integrate into Snyk. Save the environment ID for later use (available in the URL of the new window as well). Click `Deploy OneAgent` -> `Kubernetes` and follow the instructions. Ensure OneAgent is running in full-stack mode.
+2. Ensure you have OneAgent deployed in your Kubernetes environment. Navigate to `Settings` then `Environments` and select the environment you want to integrate into Snyk. Save the environment ID for later use (available in the URL of the new window as well). Click `Deploy OneAgent` then `Kubernetes` and follow the instructions. Ensure OneAgent is running in full-stack mode.
 3. Ensure your deployment is activated. On your environment's page, click `Kubernetes` , then `Recommendations` and activate the cluster where you deployed OneAgent.
-4. An OAuth client with the right permissions. Navigate to [https://myaccount.dynatrace.com/accounts](https://myaccount.dynatrace.com/accounts), then to `Identity & access management` , select `OAuth clients` and click `Create client`. Fill in the details and check the following permissions, then click `Create client`:
+4. Create an OAuth client with the right permissions. Navigate to [https://myaccount.dynatrace.com/accounts](https://myaccount.dynatrace.com/accounts), then to `Identity & access management`. Select `OAuth clients` and click `Create client`. Fill in the details and check the following permissions; then click `Create client`:
 
 <pre><code><strong>storage:entities:read
 </strong></code></pre>
@@ -263,6 +263,10 @@ Comply with the following steps before integrating Dynatrace with Snyk AppRisk:
 * Enter the **OAuth client secret**.
 * Click the **Done** button.
 * When the connection is established, the **Dynatrace** integration status changes to **Connected**.
+
+{% hint style="info" %}
+After the Dynatrace runtime data becomes available from the runtime integration, it will appear in Snyk AppRisk within a few hours.
+{% endhint %}
 
 ## Sysdig setup guide
 
@@ -292,35 +296,6 @@ The `Account API Token` must be a `Sysdig Secure API token` and not a `Sysdig Mo
 * Click the **Done** button.
 * When the connection is established, the status of the Sysdig integration is changed to **Connected**.
 
-## ServiceNow CMDB setup guide
-
-### Required Parameters <a href="#servicenow-cmdb-required-parameters" id="servicenow-cmdb-required-parameters"></a>
-
-1. Setup the host instance for the ServiceNow CMDB by following this example `https://<INSTANCE_NAME>.service-now.com`.
-2. Username and Password - Credentials for your ServiceNow CMDB instance.
-3. The CMDB configuration item class. The list can be found here: [https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/configuration-management/reference/cmdb-tables-details.html](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/configuration-management/reference/cmdb-tables-details.html)
-4. Repo URL - Add the URL of the repository.
-
 {% hint style="info" %}
-* This feature is only for the integration with ServiceNow CMDB
-* The data gathered by Snyk from ServiceNow CMDB will be correlated with the Repository Assets.
-{% endhint %}
-
-### Integration Hub setup <a href="#servicenow-cmdb-integration-hub-setup" id="servicenow-cmdb-integration-hub-setup"></a>
-
-* Open the **Integration Hub** menu.&#x20;
-* Select the **App Context** tag and search for ServiceNow CMDB.&#x20;
-* Click the **Add** button.
-* Add the **Host URL** - this is your ServiceNow instance, use this format: `https://<INSTANCE_NAME>.service-now.com`
-* Add the **Username** and the **Password**- the username and password to access the ServiceNow CMDB instance
-* Add the **Table name** - select the configuration item class that Snyk AppRisk should onboard. Use this format `cmdb_ci_<class>`
-* Add the **Repo URL** - the specific URL that is being referred to in the ServiceNow CMDB record.
-* You can select one or more attributes related to repository assets and configure where Snyk AppRisk can take this attribute in ServiceNow CMDB. Example:&#x20;
-  * Category: application\_type
-  * Owner: business\_unit
-* Click the **Done** button.
-* When the connection is established, the status of the ServiceNow CMDB integration is changed to **Connected**.
-
-{% hint style="info" %}
-The ServiceNow CMDB integration is available for both Snyk AppRisk Essentials and Snyk AppRisk Pro plans.
+After the Sysdig runtime data becomes available from the runtime integration, it will appear in Snyk AppRisk within a few hours.
 {% endhint %}

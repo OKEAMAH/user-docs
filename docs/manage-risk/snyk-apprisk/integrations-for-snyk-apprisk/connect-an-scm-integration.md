@@ -19,6 +19,10 @@ If your SCM instance is not publicly accessible, you must connect using Snyk Bro
 
 ## GitHub setup guide
 
+{% hint style="info" %}
+If you used GitHub Apps for your SCM integrations at the Snyk Organization level, Snyk AppRisk requires an overview of your GitHub Organization. This means that the GitHub integration in Snyk AppRisk uses an API token as an authentication method to onboard your GitHub Organization.&#x20;
+{% endhint %}
+
 ### Pulled entities <a href="#github-pulled-entities" id="github-pulled-entities"></a>
 
 * Repositories
@@ -37,7 +41,7 @@ If you have changed the name of your GitHub organization, copy the new name from
 3. Access Token (`mandatory`): Create your GitHub PAT from your GitHub Organization.&#x20;
 
 * Generate your GitHub PAT by following the instructions in the [Generate a Personal access token from your GitHub settings](connect-an-scm-integration.md#generate-a-personal-access-token-from-your-github-settings) section.&#x20;
-* Authorize your GitHub PAT if you have configured SAML SSO. See the [How to authorize your Personal Access Token and enable SSO](../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/snyk-github-enterprise-integration.md#how-to-authorize-your-personal-access-token-and-enable-sso) page for more details.
+* Authorize your GitHub PAT if you have configured SAML SSO. See the [How to authorize your Personal Access Token and enable SSO](../../../scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations/snyk-github-enterprise-integration.md#how-to-authorize-your-personal-access-token-and-enable-sso) page for more details.
 
 {% hint style="info" %}
 If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page.
@@ -45,7 +49,7 @@ If you want to use the Broker Token follow the instructions from the [Snyk Broke
 
 4. API URL (`mandatory`) - Input the API URL. The default URL is `https://api.github.com`.
 5. Pull personal repositories (`optional`): Enable the option if you only want to pull the repositories you own.
-6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](backstage-file-for-scm-integrations.md) page.
+6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
 
 #### Generate a Personal access token from your GitHub settings
 
@@ -94,7 +98,7 @@ If you want to use the Broker Token follow the instructions from the [Snyk Broke
 3. Host URL (`mandatory`): The IP/URL of the GitLab server. The default URL is [`https://gitlab.com`](https://gitlab.com)
 4. Verify SSL (`optional`): Enable the option if you want to verify the SSL.
 5. Pull personal repositories (`optional`): Enable the option If you only want to pull the repositories you own.
-6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](backstage-file-for-scm-integrations.md) page.
+6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
 
 #### Generate a Personal access token from your GitLab settings
 
@@ -130,7 +134,7 @@ If you want to use the Broker Token follow the instructions from the [Snyk Broke
 {% endhint %}
 
 4. API URL (`mandatory`): The API URL, for example, [`https://dev.azure.com/`](https://dev.azure.com/). You can use a custom URL that is publicly accessible.
-5. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](backstage-file-for-scm-integrations.md) page.
+5. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
 
 #### Generate a Personal access token from your Azure DevOps settings
 
@@ -155,10 +159,8 @@ You can use the[ Azure DevOps REST API v6](https://learn.microsoft.com/en-us/res
 ## BitBucket setup guide
 
 {% hint style="info" %}
-BitBucket Server and BitBucket Cloud do not support automatic language detection. \
-If you use BitBucket Cloud you can manually add the language tags to a repository.&#x20;
-
-Note that for BitBucket Server you are unable to manually add language tags to a repository.
+Bitbucket Server and Bitbucket Cloud do not support automatic language detection. You can manually add language tags to a Bitbucket Cloud repository.\
+After manually setting up the languages in your Bitbucket project, Snyk can automatically detect and ingest all those languages in your Snyk AppRisk application.
 {% endhint %}
 
 ### Pulled entities <a href="#bitbucket-pulled-entities" id="bitbucket-pulled-entities"></a>
@@ -194,7 +196,7 @@ Create a BitBucket app password by following these steps:
 {% endhint %}
 
 6. Service type (`mandatory`): Select the service type, Cloud, or On-premises.
-7. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](backstage-file-for-scm-integrations.md) page.
+7. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
 
 ### API version <a href="#bitbucket-api-version" id="bitbucket-api-version"></a>
 

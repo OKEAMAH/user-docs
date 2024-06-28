@@ -26,7 +26,7 @@ You can run Snyk in the following ways:
 
 * [**Web**](snyk-web-ui.md): the Snyk Web UI ([app.snyk.io](https://app.snyk.io)) provides a browser-based experience with functions such as configuration settings, filtering and fixing discovered issues, and reports.
 * [**CLI**](../snyk-cli/): the Snyk Command Line Interface enables you to run vulnerability scans on your local machine and integrate Snyk into your pipeline.
-* [**IDEs**](../integrate-with-snyk/use-snyk-in-your-ide/): the Snyk IDE integrations enable you to embed Snyk in your development environment.
+* [**IDEs**](../scm-ide-and-ci-cd-workflow-and-integrations/snyk-ide-plugins-and-extensions/): the Snyk IDE integrations enable you to embed Snyk in your development environment.
 * [**API**](../snyk-api/): the Snyk API enables you to integrate with Snyk programmatically, tuning Snyk security automation to your specific workflows.
 
 This video shows using the CLI to scan for vulnerabilities.
@@ -39,7 +39,7 @@ Running Snyk from the command line.
 
 The Snyk tech stacks that are supported depend on the Snyk product you use:
 
-* **Snyk Open Source** and **Snyk Code**: see [Supported languages and frameworks](supported-languages-and-frameworks/).
+* **Snyk Open Source** and **Snyk Code**: see [Supported languages and frameworks](../supported-languages-package-managers-and-frameworks/).
 * **Snyk Container**: see [Supported operating system distributions](../scan-with-snyk/snyk-container/how-snyk-container-works/supported-operating-system-distributions.md).
 * **Snyk Infrastructure as Code**: see [Supported IaC and cloud providers](../scan-with-snyk/snyk-iac/supported-iac-languages-cloud-providers-and-cloud-resources/).
 

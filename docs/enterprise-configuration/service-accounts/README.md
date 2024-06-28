@@ -23,7 +23,7 @@ This includes, but is not limited to, scanning using a CI/CD or build system plu
 
 ### Use a service account for GitHub Enterprise integration
 
-If your team needs to set up a service account in GitHub, you must use [GitHub Enterprise](../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/snyk-github-enterprise-integration.md), which is available only with Snyk Enterprise accounts.
+If your team needs to set up a service account in GitHub, you must use [GitHub Enterprise](../../scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations/snyk-github-enterprise-integration.md), which is available only with Snyk Enterprise accounts.
 
 Using a service account to authenticate with an integration rather than a Snyk user's token ensures continuity when users change roles or close their personal Snyk accounts.
 
@@ -84,7 +84,7 @@ From the **Role** dropdown list, select an appropriate role.
 
 For Group service accounts, choose from the following list of roles to configure the scope of the token; Snyk recommends selecting Viewer or Admin.
 
-* **Group Viewer** enables read-only access. Note that to set an API token to be read-only and unable to write to the platform, you must use a service account and set it to Group Viewer. See [Snyk API token permissions users can control](../../snyk-api/authentication-for-api/api-token-permissions-users-can-control.md).
+* **Group Viewer** enables read-only access. Note that to set an API token to be read-only and unable to write to the platform, you must use a service account and set it to Group Viewer. See [Snyk API token permissions users can control](../../snyk-api/rest-api/authentication-for-api/api-token-permissions-users-can-control.md).
 * **Group Admin** enables full administrator access.
 * **Group Member** associates a service account with a group but does not grant any specific access.
 

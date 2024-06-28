@@ -22,7 +22,7 @@ Snyk Projects concepts include the following:
 
 Projects are held in a Target. A Target represents an external resource Snyk has scanned: a code repository, a Kubernetes workload, or other scannable resource external to Snyk. Snyk creates a Target when you request to import a Project or scan using the CLI. If the import fails or finds nothing, the Target will be empty.
 
-When you select **Group by target**, Snyk Targets appear in the **Projects** listing. You can also find Targets using the Snyk REST API endpoint [Get targets by org ID](https://apidocs.snyk.io/?version=2022-12-21%7Ebeta#get-/orgs/-org\_id-/targets).
+When you select **Group by target**, Snyk Targets appear in the **Projects** listing. You can also find Targets using the Snyk REST API endpoint [Get targets by org ID](https://apidocs.snyk.io/?#get-/orgs/-org\_id-/targets) (use latest version).
 
 Click the **dots** at the far right of each Target on the list to see the **available actions**; these include **deleting** a target.
 

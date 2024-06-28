@@ -1,7 +1,7 @@
 # Supported IaC languages, cloud providers, and cloud resources
 
 {% hint style="info" %}
-For environments supported with other Snyk products, see [Supported languages and frameworks](../../../getting-started/supported-languages-and-frameworks/).
+For environments supported with other Snyk products, see [Supported languages and frameworks](../../../supported-languages-package-managers-and-frameworks/).
 {% endhint %}
 
 Use Snyk IaC to find, view, and fix issues in infrastructure configuration files for Terraform, Kubernetes Manifests, AWS CloudFormation, Azure Resource Manager (ARM), and Helm Charts.
@@ -24,9 +24,9 @@ terrraform init && snyk iac test
 
 Snyk IaC supports scanning the following cloud providers:
 
-* [Amazon Web Services](../../../integrate-with-snyk/cloud-platforms-integrations/aws-integration/)
-* [Azure](../../../integrate-with-snyk/cloud-platforms-integrations/azure-integration-for-cloud-configurations/)
-* [Google Cloud](../../../integrate-with-snyk/cloud-platforms-integrations/google-cloud-integration/)
+* [Amazon Web Services](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/aws-integration/)
+* [Azure](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/azure-integration-for-cloud-configurations/)
+* [Google Cloud](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/google-cloud-integration/)
 
 ## Supported resources for cloud scans
 

@@ -4,11 +4,11 @@
 
 ## Start using Snyk
 
-<table data-header-hidden><thead><tr><th></th><th width="164.33333333333331"></th><th width="188"></th><th></th></tr></thead><tbody><tr><td>​<a href="getting-started/">Getting started</a><br>Start running Snyk to secure your code</td><td><a href="enterprise-configuration/">Enterprise configuration</a><br>Use Snyk in an enterprise system</td><td><a href="implement-snyk/">Implement Snyk</a><br>Set up Snyk to run in your business</td><td><a href="getting-started/supported-languages-and-frameworks/">Supported languages</a><br>Match your language and framework to Snyk</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th></th><th width="164.33333333333331"></th><th width="188"></th><th></th></tr></thead><tbody><tr><td>​<a href="getting-started/">Getting started</a><br>Start running Snyk to secure your code</td><td><a href="enterprise-configuration/">Enterprise configuration</a><br>Use Snyk in an enterprise system</td><td><a href="implement-snyk/">Implement Snyk</a><br>Set up Snyk to run in your business</td><td><a href="supported-languages-package-managers-and-frameworks/">Supported languages</a><br>Match your language and framework to Snyk</td></tr></tbody></table>
 
 ## Integrate with Snyk <a href="#explore-snyk-products" id="explore-snyk-products"></a>
 
-<table data-header-hidden><thead><tr><th width="247"></th><th width="252"></th><th width="177"></th></tr></thead><tbody><tr><td><a href="integrate-with-snyk/git-repositories-scms-integrations-with-snyk/">Git repositories</a><br>Connect code repos to Snyk</td><td><a href="integrate-with-snyk/use-snyk-in-your-ide/">IDEs</a><br>Use Snyk in your dev environment</td><td><a href="integrate-with-snyk/snyk-ci-cd-integrations/">CI/CD</a><br>Add Snyk to your CI/CD pipeline</td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th width="247"></th><th width="252"></th><th width="177"></th></tr></thead><tbody><tr><td><a href="scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations/">Git repositories</a><br>Connect code repos to Snyk</td><td><a href="scm-ide-and-ci-cd-workflow-and-integrations/snyk-ide-plugins-and-extensions/">IDEs</a><br>Use Snyk in your dev environment</td><td><a href="scm-ide-and-ci-cd-workflow-and-integrations/snyk-ci-cd-integrations/">CI/CD</a><br>Add Snyk to your CI/CD pipeline</td></tr></tbody></table>
 
 ## Scan using Snyk <a href="#explore-snyk-products" id="explore-snyk-products"></a>
 
