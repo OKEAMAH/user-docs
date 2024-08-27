@@ -2,7 +2,7 @@
 
 ## Conditions
 
-To use Snyk Code in an [IDE](../../integrate-with-snyk/use-snyk-in-your-ide/), [Snyk CLI](../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/), and [Snyk API](../../snyk-api/), you must perform the following actions
+To use Snyk Code in an [IDE](../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/), [Snyk CLI](../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/), and [Snyk API](../../snyk-api/), you must perform the following actions
 
 1. [Enable Snyk Code in Snyk Web UI](configure-snyk-code.md#enable-snyk-code-in-snyk-web-ui)
 2. [Integrate Git repository with Snyk](configure-snyk-code.md#integrate-git-repository-with-snyk)
@@ -15,13 +15,13 @@ Snyk Code only scans and tests new repositories that are imported to Snyk. If a 
 Before scanning your code with Snyk Code, ensure the following:
 
 * You have completed the [Quickstart](../../getting-started/quickstart/).
-* Your repositories contain code in a [supported language and platform](../../getting-started/supported-languages-and-frameworks/).
+* Your repositories contain code in a [supported language and platform](../../supported-languages-package-managers-and-frameworks/).
 
 ## Enable Snyk Code in Snyk Web UI
 
 ### Prerequisites
 
-To enable Snyk Code in your Organization, you need to be an [Org Admin](../../snyk-admin/manage-permissions-and-roles/pre-defined-roles.md).
+To enable Snyk Code in your Organization, you need to be an [Org Admin](../../snyk-admin/user-roles/pre-defined-roles.md).
 
 ### Enable Snyk Code&#x20;
 
@@ -75,7 +75,7 @@ The **Source control** integrations display only SCMs that are supported by Snyk
 
 This grants Snyk access permissions for the integrated SCM.
 
-For more information on integrating Snyk with each of the available SCMs, see [Git repositories (SCMs)](../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/).
+For more information on integrating Snyk with each of the available SCMs, see [Git repositories (SCMs)](../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/).
 
 After you have integrated the SCM with your Snyk account, you can import the repositories you want to scan using Snyk Code.
 

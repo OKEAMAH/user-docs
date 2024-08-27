@@ -88,4 +88,24 @@ redirects:
   manage-risk/snyk-apprisk/risk-based-prioritization-for-snyk-apprisk/how-risk-based-prioritization-works: manage-risk/snyk-apprisk/prioritization-with-insights-for-snyk-apprisk/how-risk-based-prioritization-works.md
   scan-application-code/snyk-open-source/snyk-open-source-supported-languages-and-package-managers: scan-using-snyk/supported-languages-frameworks-and-feature-availability-overview/README.md
   more-info/disclosing-vulnerabilities/disclose-a-vulnerability-in-snyk-services: working-with-snyk/reporting-security-issues.md
-  
+  manage-risk/snyk-apprisk/prioritization-with-insights-for-snyk-apprisk: manage-risk/prioritize-issues-for-fixing/prioritization-for-snyk-apprisk.md
+  manage-risk/snyk-apprisk/implementation-guide-for-snyk-apprisk: implement-snyk/enterprise-implementation-guide/README.md
+  manage-risk/snyk-apprisk/implementation-guide-for-snyk-apprisk/level-1-configure-snyk-apprisk-and-setup-integrations: implement-snyk/enterprise-implementation-guide/phase-2-configure-account/configure-snyk-apprisk-integrations.md  
+  scan-using-snyk/snyk-container/container-security-integrations/integrate-with-docker-hub/unauthorized-access-or-resource-does-not-exist-docker-hub: scan-using-snyk/snyk-container/container-security-integrations/integrate-with-docker-hub/configure-the-integration-with-docker-hub.md
+  scan-using-snyk/snyk-container/snyk-container-integrations/integrate-with-docker-hub/unauthorized-access-or-resource-does-not-exist-docker-hub: scan-using-snyk/snyk-container/container-security-integrations/integrate-with-docker-hub/configure-the-integration-with-docker-hub.md
+  snyk-api/how-to-use-snyk-api-endpoints/aggregated-project-issues-api-returns-an-array-of-ignorereasons: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/how-to-use-snyk-api-endpoints/determine-why-api-import-targets-has-failed: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/how-to-use-snyk-api-endpoints/list-all-projects-with-a-vulnerability-linked-to-a-cve: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/how-to-use-snyk-api-endpoints/get-a-list-of-fixed-issues-using-snyk-api: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/api-endpoints-index-and-notes/set-project-attributes-using-the-snyk-api: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/how-to-use-snyk-api-endpoints/set-project-attributes-using-the-snyk-api: snyk-api/api-endpoints-index-and-notes/README.md
+  snyk-api/how-to-use-snyk-api-endpoints/find-who-created-a-service-account: snyk-api/api-endpoints-index-and-notes/README.md
+  manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration: manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/application-context-for-scm-integrations.md
+  manage-risk/snyk-apprisk/dashboard-for-snyk-apprisk: getting-started/snyk-web-ui.md
+  manage-risk/snyk-apprisk/integrations-for-snyk-apprisk: integrate-with-snyk/third-party-integrations-for-snyk-apprisk.md
+  manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-an-scm-integration: scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations/README.md
+  manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/customize-an-integration: getting-started/snyk-web-ui.md
+  scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/using-github-or-github-enterprise-integration: scm-ide-and-ci-cd-integrations/README.md
+  scm-ide-and-ci-cd-workflow-and-integrations: scm-ide-and-ci-cd-workflow-and-integrations/README.md
+  scm-ide-and-ci-cd-integrations/snyk-scm-integrations/bitbucket-cloud-vs-bitbucket-cloud-app: scm-ide-and-ci-cd-integrations/README.md
+  scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/git-repository-cloning-for-scm-integrations: snyk-scm-integrations/introduction-to-git-repository-integrations/workspaces-for-scm-integrations/README.md

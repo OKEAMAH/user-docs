@@ -1,15 +1,15 @@
 # Detect vulnerable base images from your Dockerfile
 
+{% hint style="info" %}
+You can add a single Dockerfile to each image that you have imported.&#x20;
+{% endhint %}
+
 ## **Prerequisites for adding a Dockerfile**
 
 To receive base image fix advice, including major, minor, and alternative upgrades, as well as advice when you need to rebuild your image, ensure you:
 
 * Have configured your preferred Git repository
 * Have imported the repository that contains the relevant Dockerfile.
-
-{% hint style="info" %}
-You can add a single Dockerfile to each image that you have imported.&#x20;
-{% endhint %}
 
 ## **Add a Dockerfile**
 
@@ -43,11 +43,11 @@ The following information is displayed: **Current image**, **Minor upgrades**, *
 Snyk detects vulnerable base images by scanning your Dockerfile when you import a Git repository. This allows you to examine security issues before building the image and thus helps solve potential problems before they land in your registry or in production.
 
 {% hint style="info" %}
-When scanning Dockerfiles, Snyk can provide vulnerability information and base image recommendations for [supported base images](https://snyk.io/docker-images/).
+When scanning Dockerfiles, Snyk can provide vulnerability information and base image recommendations for supported base images. If you need help, contact [Snyk Support](https://support.snyk.io/hc/en-us).
 {% endhint %}
 
-After you [integrate your Git repository with Snyk](../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/), any Dockerfiles in that repository are automatically identified and shown in the Web UI as Projects.
+After you [integrate your Git repository with Snyk](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/), any Dockerfiles in that repository are automatically identified and shown in the Web UI as Projects.
 
 <figure><img src="../../../.gitbook/assets/dockerfiles_projects.png" alt=""><figcaption><p>Dockerfiles displayed in the Project list</p></figcaption></figure>
 
-For details about detecting vulnerable base images in containers and fix recommendations, see [Detect the container base image](../use-snyk-container-from-the-web-ui/detect-the-container-base-image.md).
+For details about detecting vulnerable base images in containers and fix recommendations, see [Detect the container base image](../../../scan-using-snyk/snyk-container/use-snyk-container/detect-the-container-base-image.md).

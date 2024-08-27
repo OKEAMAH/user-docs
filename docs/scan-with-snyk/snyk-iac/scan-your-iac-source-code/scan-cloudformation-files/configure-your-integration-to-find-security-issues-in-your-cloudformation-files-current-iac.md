@@ -8,7 +8,7 @@ Snyk tests and monitors CloudFormation files from source code repositories. It g
 
 ## Supported Git repositories and CloudFormation file formats
 
-Snyk currently scans CloudFormation files in `JSON` and `YAML` format when imported from an integrated Git repository. Scan a CloudFormation module repository by either importing the repo that holds the module from an SCM or by specifying the directory itself with the `snyk iac test` CLI command.
+Snyk scans CloudFormation files in `JSON` and `YAML` format when imported from an integrated Git repository. Scan a CloudFormation module repository by either importing the repo that holds the module from an SCM or by specifying the directory itself with the `snyk iac test` CLI command.
 
 Scanning CloudFormation provides security feedback on everything that is statically configured in the module. To benefit from recurring and scheduled testing, follow the best practice of importing custom modules directly from an SCM.
 
@@ -17,7 +17,7 @@ Scanning CloudFormation provides security feedback on everything that is statica
 ### **Prerequisites for scanning CloudFormation files**
 
 * You must be an administrator for the Organization you are configuring in Snyk.
-* Ensure you have already integrated your Git repository, For details, see [Git repository (SCM) integrations](../../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/).
+* Ensure you have already integrated your Git repository, For details, see [Git repository (SCM) integrations](../../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/).
 
 ### **Configure Snyk to scan CloudFormation files**
 

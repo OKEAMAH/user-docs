@@ -5,17 +5,27 @@ Each business and environment is different. With that in mind, this guide aims t
 The guide starts by recognizing that most businesses:
 
 * Have a backlog of issues in their existing software.
-* Are continuously creating new software, and need to secure new code.&#x20;
+* Are continuously creating new software and need to secure new code.&#x20;
 
 {% hint style="info" %}
 There are **typical timelines for implementation** depending on the size and scope of your business.
 
-If your business is small and nimble, Snyk implementation can be achieved in days. You can start scanning with Snyk soon after purchasing, often using a Git integration and the [API Import Tool](../../snyk-api/snyk-tools/tool-snyk-api-import/). See the [Getting started](../../getting-started/) and [Start scanning](../../scan-with-snyk/start-scanning-using-the-cli-web-ui-or-api.md) sections for details of this type of process
+If your business is small and nimble, Snyk implementation can be achieved in days. You can start scanning with Snyk soon after purchasing, often using a Git integration and the [API Import Tool](../../scan-using-snyk/snyk-tools/tool-snyk-api-import/). See the [Getting started](../../getting-started/) and [Start scanning](../../scan-with-snyk/start-scanning-using-the-cli-web-ui-or-api.md) sections for details of this type of process.
 
 However, for larger, more process-oriented enterprises, the implementation process may take weeks or months and it requires more detailed planning to succeed.&#x20;
 {% endhint %}
 
-If you want to enable the Application Security Posture Management for all your used products, you can use the [Snyk AppRisk Implementation Guide](../../manage-risk/snyk-apprisk/implementation-guide-for-snyk-apprisk/).
+The Snyk AppRisk Essentials plan is included in the Snyk Enterprise plan, meaning that you will gain access to the following features:
+
+* [Coverage control](../../manage-risk/policies/assets-policies/use-cases-for-policies/coverage-and-coverage-gap-policies.md) for SCM.
+* [Policy](../../manage-risk/policies/assets-policies/) creation to automatically trigger specific actions.
+* [Backstage file](../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md) customization for SCM integrations.
+* [Customized analytics](../../manage-risk/enterprise-analytics/) and reports about the application.&#x20;
+
+{% hint style="info" %}
+If you want to upgrade your plan to Snyk AppRisk Pro, please contact your salesperson. \
+On the [Snyk AppRisk Essentials vs Snyk AppRisk Pro ](../../scan-using-snyk/snyk-apprisk/snyk-apprisk-essentials-vs-snyk-apprisk-pro.md)page, you can find more details about the features available for both offerings.
+{% endhint %}
 
 ## Implementation strategy overview
 
@@ -27,13 +37,13 @@ This guide is composed of multiple phases, outlining a series of actions that al
 
 ### Achieve visibility
 
-For large businesses, we recommend you first focus on visibility - getting a clear sense of the security issues, but without always fixing them.
+For large businesses, Snyk recommends that you first focus on visibility - getting a clear sense of the security issues, but without always fixing them.
 
 {% hint style="info" %}
 This does not stop you from fixing issues using Snyk. You can start fixing issues early, but the emphasis is to avoid blocking development early on, build trust, and slowly introduce gating in later phases, usually the prevention phase.
 {% endhint %}
 
-Visibility achieves a broad view of security across your application portfolio, avoids Snyk scans being seen as a blocker, and minimizes impact on development processes.&#x20;
+Visibility achieves a broad view of security across your application portfolio, prevents Snyk scans from being seen as a blocker, and minimizes impact on development processes.&#x20;
 
 This visibility helps build trust while rolling out Snyk.&#x20;
 
@@ -41,14 +51,14 @@ This visibility helps build trust while rolling out Snyk.&#x20;
 
 Next is the prevention stage; stopping new security issues from being added to your applications. During this stage, you can put controls in place to allow developers to see issues in their pipelines using Pull Request (PR)/Merge Request (MR) checks, and checks in the pipeline that may block.&#x20;
 
-As part of this, developers may use IDE plugins and other tools like [Snyk Advisor](https://snyk.io/advisor) to select secure packages, and [Snyk Learn](https://learn.snyk.io/) to educate on secure coding, security, and the product.
+As part of this, developers may use IDE plugins and other tools like [Snyk Advisor](https://snyk.io/advisor) to select secure packages and [Snyk Learn](https://learn.snyk.io/) to educate on secure coding, security, and the product.
 
 ### Fix the backlog and triage issues
 
 Finally, you can focus on fixing your backlog of security issues. This can take several forms:
 
-* As part of the initial rollout, security or initial stakeholder may triage the initial results for the existing portfolio, create tickets for priority items to investigate or address, or have the teams do that for their applications as part of the weekly triage process.
-* After getting visibility and achieving prevention, you can look at your backlog of issues.  For example, a weekly triage process with the key stakeholders can guide the teams on what to address.
+* As part of the initial rollout, security or the initial stakeholder may triage the initial results for the existing portfolio, create tickets for priority items to investigate or address, or have the teams do that for their applications as part of the weekly triage process.
+* After getting visibility and achieving prevention, you can look at your backlog of issues. For example, a weekly triage process with the key stakeholders can guide the teams on what to address.
 
 ## Use enhanced resources with Snyk
 

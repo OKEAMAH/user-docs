@@ -38,7 +38,7 @@ Monitoring takes the form of
 
 Source control scanning of your Git repositories is suitable for the majority of supported languages, but note that if you use a private package manager, such as Artifactory, this must be integrated with Snyk to scan your private packages.
 
-Importing Projects through a Git repository integration can be done manually through the browser, or you can leverage the API, either by using the [snyk-api-import](../../../../snyk-api/snyk-tools/tool-snyk-api-import/) tool to import repositories in bulk, or the [Import Targets](https://snyk.docs.apiary.io/#reference/import-projects/import/import-targets) API v1 endpoint to import specific repositories, which can be inserted into a pipeline.
+Importing Projects through a Git repository integration can be done manually through the browser, or you can leverage the API, either by using the [snyk-api-import](../../../../scan-using-snyk/snyk-tools/tool-snyk-api-import/) tool to import repositories in bulk, or the [Import Targets](https://snyk.docs.apiary.io/#reference/import-projects/import/import-targets) API v1 endpoint to import specific repositories, which can be inserted into a pipeline.
 
 {% hint style="info" %}
 For Snyk Enterprise customers, it is strongly suggested to use the **GitHub Enterprise integration card** on the Snyk Integrations page. You do not need to be a GitHub Enterprise customer to use this option; however, using this option allows a Personal Access Token (PAT) to be used, whereas OAUTH, provided through the GitHub Integration card, provides an inconsistent experience in terms of access in the interface.
@@ -62,6 +62,8 @@ To disable gating initially, use the daily monitoring that is automatically conf
 
 &#x20;Similarly, you may want to disable fix and upgrade PR features.
 
+[Snyk AppRisk integrations](../configure-snyk-apprisk-integrations.md#setup-integrations) require additional setup and configuration using the Integration Hub option from the Snyk Web UI, Snyk AppRisk menu.
+
 ### CI/CD (Build Pipelines)
 
 Keep your applications secure by preventing deployment of vulnerable applications or components (registries), by adding Snyk in the build as a step of the pipeline.
@@ -72,7 +74,7 @@ The CLI offers
 * Support for private packages without the need to configure an additional integration, given that your build environment will have access to your private packages.
 * Visibility to components that are pushed to production by either breaking builds and reporting to Snyk or only by reporting to Snyk.
 
-There are a number of [CI/CD integrations](../../../../integrate-with-snyk/snyk-ci-cd-integrations/) that you can use, or you can use the [Snyk CLI](../../../../snyk-cli/) as part of your pipeline to have more flexibility in the tests you are running.
+There are a number of [CI/CD integrations](../../../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/) that you can use, or you can use the [Snyk CLI](../../../../snyk-cli/) as part of your pipeline to have more flexibility in the tests you are running.
 
 In the initial phase, Snyk recommends using the `monitor` feature to import information into Snyk so you can see any discovered issues, unless you are already importing your repos using a source control integration to achieve this. Later, when you want to start gating and blocking new vulnerabilities from being added, you can introduce `test` features, initially failing builds on critical issues, and then gradually adapting the fail criteria over time.
 

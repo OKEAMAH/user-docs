@@ -22,7 +22,7 @@ Snyk has a number of tools and processes that help secure your entire software d
 For users who are evaluating Snyk or planning an enterprise deployment, and for most programming languages, Snyk recommends integrating with a Git repository to get started.
 
 {% hint style="info" %}
-The tool that best serves your tech stack, environment, and workflow depends on your individual circumstances. See [Supported languages and frameworks ](../getting-started/supported-languages-and-frameworks/)for the guide specific to your language for more details.
+The tool that best serves your tech stack, environment, and workflow depends on your individual circumstances. See [Supported languages and frameworks ](../supported-languages-package-managers-and-frameworks/)for the guide specific to your language for more details.
 {% endhint %}
 
 To learn more about choosing the best integration points within the software development lifecycle for you and for your team, at their current level of security maturity, see [Integrating Snyk at your company](https://learn.snyk.io/lesson/integrate-snyk-at-your-company/).
@@ -56,7 +56,7 @@ Adding projects video
 
 ## **Configure initial Snyk integration settings**
 
-After your Git repository is connected (see [See Git repository integrations (SCMs)](../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/) for details), you have automated processes available to automatically check pull requests for vulnerabilities, automatically generate pull requests, and automatically generate dependency upgrade pull requests. Snyk recommends you disable these options initially.
+After your Git repository is connected (see [See Git repository integrations (SCMs)](../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/) for details), you have automated processes available to automatically check pull requests for vulnerabilities, automatically generate pull requests, and automatically generate dependency upgrade pull requests. Snyk recommends you disable these options initially.
 
 The settings for each Snyk Project are inherited from the Snyk Organization integration settings. Follow these steps to ensure these settings are disabled: Default Snyk test for pull requests, Automatic fix pull requests, Automatic dependency upgrade pull requests, and Automatic updates to Dockerfile base images. You can go back and enable these settings when your teams are ready to implement these options.
 

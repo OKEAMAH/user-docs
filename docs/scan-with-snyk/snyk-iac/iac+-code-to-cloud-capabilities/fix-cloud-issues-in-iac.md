@@ -4,6 +4,9 @@
 **Release** **status**
 
 The fix cloud issues in IaC feature is available for [IaC+](./) only and supports AWS, Azure, and Google Cloud.
+
+Snyk IaC+ is now in closed beta and is no longer accepting new customers for participation.\
+See [Getting started with current IaC](https://docs.snyk.io/scan-using-snyk/snyk-iac/getting-started-with-current-iac) for details about the functionality available.
 {% endhint %}
 
 The fix cloud issues in IaC feature enables users to fix cloud issues directly in the IaC source code used to deploy the misconfigured cloud resources, by linking a cloud issue to the underlying IaC template via an SCM source code link.
@@ -35,7 +38,7 @@ You must have the following:
 
 ### Step 1: Onboard IaC and cloud environments to Snyk
 
-[Onboard IaC+](../getting-started-with-iac+-and-cloud-scans/) environments via the Snyk CLI workflow (`snyk iac test --report`), and onboard relevant cloud environments via [AWS Integration](../../../integrate-with-snyk/cloud-platforms-integrations/aws-integration/), [Azure Integration](../../../integrate-with-snyk/cloud-platforms-integrations/azure-integration-for-cloud-configurations/snyk-cloud-for-azure-api/), or [Google Cloud Integration](../../../integrate-with-snyk/cloud-platforms-integrations/google-cloud-integration/).
+[Onboard IaC+](../getting-started-with-iac+-and-cloud-scans/) environments via the Snyk CLI workflow (`snyk iac test --report`), and onboard relevant cloud environments via [AWS Integration](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/aws-integration/), [Azure Integration](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/azure-integration-for-cloud-configurations/snyk-cloud-for-azure-api/), or [Google Cloud Integration](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/google-cloud-integration/).
 
 `snyk iac test` must be run from the root folder of the cloned Git repository, not a subdirectory. If you are using GitLab or Azure DevOps, add a `target-reference` option so Snyk can generate an SCM link, as in the following CLI command:
 

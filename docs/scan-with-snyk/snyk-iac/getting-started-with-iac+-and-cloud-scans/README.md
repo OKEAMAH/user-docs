@@ -1,13 +1,9 @@
 # Getting started with IaC+ and cloud scans
 
 {% hint style="warning" %}
-**Release status**&#x20;
-
-IaC+ is in [Early Access](../../../getting-started/snyk-release-process.md#early-access) and available only for Enterprise plans.
-
-To enable the feature, see [Snyk Preview](https://docs.snyk.io/snyk-admin/manage-settings/snyk-preview).
-
-Cloud scans for AWS, Azure, and Google Cloud are generally available to Snyk IaC customers on an enterprise plan - for both current IaC and IaC+.
+**Release status** \
+Snyk IaC+ is now in closed beta and is no longer accepting new customers for participation.\
+See [Getting started with current IaC](https://docs.snyk.io/scan-using-snyk/snyk-iac/getting-started-with-current-iac) for details about the functionality available.
 {% endhint %}
 
 Use IaC+ to find, view, and fix issues in cloud configuration files for Terraform, Kubernetes (except Helm, coming soon), AWS CloudFormation, and Azure Resource Manager (ARM) in your Git repositories.
@@ -23,12 +19,12 @@ To start using IaC+ you must have the following:
 * A Snyk account. For details, see [Create a Snyk account](../../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md).
 * Belong to an Organization that has Snyk IaC on the enterprise plan.
 * An existing Terraform, CloudFormation, or Azure Resource Manager environment to work in, or deployed AWS, Azure, or Google Cloud account to onboard.
-* Integration with your Git repository as for other Snyk products. For details, see [Git repositories (SCMs)](../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/).
+* Integration with your Git repository as for other Snyk products. For details, see [Git repositories (SCMs)](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/).
 
 ## Import IaC+ SCM repositories
 
 {% hint style="warning" %}
-IaC+ SCM integrations use the new Snyk [git repository cloning](../../../working-with-snyk/how-snyk-handles-your-data.md#git-repository-cloning) capability to support multi-file analysis. This capability is available through [Snyk Preview](../../../snyk-admin/snyk-preview.md) and must be turned on for IaC+ SCM scans to work properly.
+IaC+ SCM integrations use the new [Snyk Workspaces](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/workspaces-for-scm-integrations.md) capability to support multi-file analysis. This capability is available through [Snyk Preview](../../../snyk-admin/snyk-preview.md) and must be turned on for IaC+ SCM scans to work properly.
 
 If you want to scan a new SCM repository with IaC+ and you have already imported that repository, you must re-import the repository. This will not affect any of your existing Projects.
 {% endhint %}
@@ -61,15 +57,15 @@ The cloud environments table displays the following information for each environ
 
 <figure><img src="../../../.gitbook/assets/snyk-cloud-environments-page.png" alt="The Snyk environments page in the Snyk Web UI"><figcaption><p>The Snyk environments page in the Snyk Web UI</p></figcaption></figure>
 
-To import a cloud environment, select the **Add environment** drop-down and select the cloud provider. Follow the steps in [AWS Integration: Web UI](../../../integrate-with-snyk/cloud-platforms-integrations/aws-integration/aws-integration-web-ui/), [Google Cloud Integration: Web UI](../../../integrate-with-snyk/cloud-platforms-integrations/google-cloud-integration/google-cloud-integration-web-ui/), or [Azure Integration: Web UI](../../../integrate-with-snyk/cloud-platforms-integrations/azure-integration-for-cloud-configurations/azure-integration-web-ui/) to create the environment.&#x20;
+To import a cloud environment, select the **Add environment** drop-down and select the cloud provider. Follow the steps in [AWS Integration: Web UI](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/aws-integration/aws-integration-web-ui/), [Google Cloud Integration: Web UI](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/google-cloud-integration/google-cloud-integration-web-ui/), or [Azure Integration: Web UI](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/azure-integration-for-cloud-configurations/azure-integration-web-ui/) to create the environment.&#x20;
 
 <figure><img src="../../../.gitbook/assets/snyk-cloud-environments-page-add-env.png" alt="Add an environment in the Snyk Web UI"><figcaption><p>Add an environment in the Snyk Web UI</p></figcaption></figure>
 
 You can also import an environment using the Snyk API:
 
-* [AWS Integration: API](../../../integrate-with-snyk/cloud-platforms-integrations/aws-integration/aws-integration-api/)
-* [Google Cloud Integration: API](../../../integrate-with-snyk/cloud-platforms-integrations/google-cloud-integration/google-cloud-integration-api/)
-* [Azure Integration: API](../../../integrate-with-snyk/cloud-platforms-integrations/azure-integration-for-cloud-configurations/snyk-cloud-for-azure-api/)
+* [AWS Integration: API](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/aws-integration/aws-integration-api/)
+* [Google Cloud Integration: API](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/google-cloud-integration/google-cloud-integration-api/)
+* [Azure Integration: API](../../../scan-using-snyk/snyk-iac/cloud-platforms-integrations/azure-integration-for-cloud-configurations/snyk-cloud-for-azure-api/)
 
 ## View IaC+ and cloud issues
 

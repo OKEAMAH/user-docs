@@ -109,7 +109,7 @@ You can use the Risk Score at the Snyk Group or Snyk Organization level.
 
 ## Prioritization based on risk
 
-[Prioritization with Insights](../snyk-apprisk/prioritization-with-insights-for-snyk-apprisk/) for Snyk AppRisk - Snyk AppRisk uses holistic application intelligence to help you identify and prioritize container, code, and open source issues based on the risk they pose to your application. You can prioritize issues based on asset classification as defined in Snyk AppRisk policies.&#x20;
+[Prioritization with Insights](prioritization-for-snyk-apprisk.md) for Snyk AppRisk - Snyk AppRisk uses holistic application intelligence to help you identify and prioritize container, code, and open source issues based on the risk they pose to your application. You can prioritize issues based on asset classification as defined in Snyk AppRisk policies.&#x20;
 
 You can use Prioritization with Insights to identify and prioritize your Container, Code, and Open Source issues based on the risk they pose to your application. These are the risk factors that you can use:
 
@@ -128,9 +128,9 @@ You can use the Prioritization with Insights at the Snyk Group or Snyk Organizat
 
 Snyk Enterprise Analytics provides a comprehensive overview of your entire application security program, offering insights into strengths, weaknesses, and opportunities at the tenant level. On the other hand, Snyk Application Analytics focuses specifically on the security and performance of individual applications. This narrower analysis helps pinpoint specific app vulnerabilities and inefficiencies, enabling targeted improvements and more detailed insights at the Snyk Group or Organization level.
 
-### Enterprise Analytics
+### Issue Analytics
 
-[Enterprise Analytics](../analytics/enterprise-analytics.md) provides a view into the performance of your AppSec program. You can use Enterprise Analytics to better understand the strengths and weaknesses of your program, identify where successful practices can be discerned, and uncover the largest opportunities for improvement that warrant investment.
+[Issue Analytics](../enterprise-analytics/issues-analytics.md) provides a view into the performance of your AppSec program. You can use Enterprise Analytics to better understand the strengths and weaknesses of your program, identify where successful practices can be discerned, and uncover the largest opportunities for improvement that warrant investment.
 
 You can use this type of prioritization with the following Snyk Plan:&#x20;
 
@@ -140,12 +140,12 @@ You can use this type of prioritization with the following Snyk Plan:&#x20;
 You can use Enterprise Analytics at the Snyk tenant level, including both the Snyk Group and Snyk Organization levels.
 
 {% hint style="info" %}
-If you have both Snyk Enterprise and Snyk AppRisk Pro plans, then Enterprise Analytics is found under the Analytics option in the [Issues](../analytics/aspm-analytics/issues-analytics.md) tab.
+If you have both Snyk Enterprise and Snyk AppRisk Pro plans, then Enterprise Analytics is found under the Analytics option in the [Issues](../enterprise-analytics/issues-analytics.md) tab.
 {% endhint %}
 
 ### Application Analytics
 
-[Application Analytics](../analytics/aspm-analytics/application-analytics.md) for Snyk AppRisk helps you assess your AppSec program from a top-down approach. It allows you to review applications, teams, and asset classes, and then focus on specific assets. You can improve security by identifying areas for enhancement, recognizing risks, and addressing blind spots. The tool retrieves data from all available groups for the tenant.
+[Application Analytics](../enterprise-analytics/application-analytics.md) for Snyk AppRisk helps you assess your AppSec program from a top-down approach. It allows you to review applications, teams, and asset classes, and then focus on specific assets. You can improve security by identifying areas for enhancement, recognizing risks, and addressing blind spots. The tool retrieves data from all available groups for the tenant.
 
 Prioritize the displayed data by using the available filters, dimension views, and specific timeframes. \
 \
@@ -167,7 +167,7 @@ You can use this type of prioritization with the following Snyk Plan:&#x20;
 
 You can use Enterprise Analytics at the Snyk tenant level, including both the Snyk Group and Snyk Organization levels.
 
-## Issues prioritization
+## Prioritization strategies
 
 Snyk has several features that help you determine which issues you discover are the most important for you to fix and the sequence in which to fix the issues.
 
@@ -181,7 +181,7 @@ You can prioritize at the Project level when looking at a specific Project. Ente
 
 Snyk Priority Score and Risk Score rank the [severity](severity-levels.md) of an issue and the urgency of fixing it. For details, see [Priority Score vs Risk Score](priority-score-vs-risk-score.md), [Priority Score](priority-score.md), and [Risk Score](risk-score.md).
 
-You can [ignore issues](ignore-issues/) and [triage issues](triage-for-issues.md) to establish your issue management strategy.
+You can [ignore issues](ignore-issues/) and [triage issues](vulnerable-conditions.md) to establish your issue management strategy.
 
 [View exploits](view-exploits.md) to see how vulnerabilities can be taken advantage of. You can then start evaluating and prioritizing vulnerabilities using guidance from the [Snyk Priority Score](priority-score.md) for each issue.
 

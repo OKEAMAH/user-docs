@@ -18,7 +18,7 @@ To apply a policy to an attribute, in the attribute selector panel, check the bo
 
 You can also search for tags that have already been created in Projects in your Group. You can select more than one tag for the policy.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-07-28 at 17.28.18.png" alt="Attribute selector panel"><figcaption><p>Attribute selector panel</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2023-07-28 at 17.28.18.png" alt="Attribute selector panel" width="291"><figcaption><p>Attribute selector panel</p></figcaption></figure>
 
 To remove a policy from an attribute, uncheck the box next to the attribute from which you want to remove the policy.
 
@@ -41,12 +41,6 @@ If multiple tags are added to a policy, the Project needs to match with only one
 For example, if you have a policy applied to `Critical`, `External`, and `Frontend`, this policy is assigned to Projects that have the same attributes, but not to a Project with the attributes `Critical` and `External` only.
 
 An example policy follows. It is applied to an attribute in the **Business Criticality** section, `Critical`, and to attributes in the **Environment** section,  `Frontend` and `External`. The policy also has two Project tags. The first tag has the key `PCI`, with the value of `Compliant`. The second tag has the key `owner`, with the value of `fred`.
-
-<div align="center" data-full-width="true">
-
-<figure><img src="../../.gitbook/assets/sample-policy.png" alt="Sample policy"><figcaption><p>Sample policy</p></figcaption></figure>
-
-</div>
 
 The following Project has the attributes `Frontend`, `External`, and `Critical`, and has at least one matching tag, `PCI:Compliant`. Thus the Project will inherit the policy, that is, the policy is assigned to this Project.
 

@@ -4,7 +4,7 @@
 
 Because Snyk for Government (US) adheres to the [FedRAMP](https://www.fedramp.gov/) and [NIST](https://www.nist.gov/) security control requirements, federal agencies can be assured that the product complies with the security standards set forth by the US Government.
 
-Snyk for Government (US) has differences from standard Snyk products that allow Snyk to be deployed to the US federal government. Adhering to FedRAMP and NIST control requirements means that some aspects of standard Snyk products are not supported in the FedRAMPl environment.
+Snyk for Government (US) has differences from standard Snyk products that allow Snyk to be deployed to the US federal government. Adhering to FedRAMP and NIST control requirements means that some aspects of standard Snyk products are not supported in the FedRAMP environment.
 
 This list identifies all the areas with differences in functionality in the Snyk for Government (US) product.&#x20;
 
@@ -17,21 +17,22 @@ This list identifies all the areas with differences in functionality in the Snyk
 * Snyk Open Source is available except:
   * Does not include Unmanaged C++
   * Does not include the npm packages `@snyk/protect` and `@snyk/fix.`
-* Snyk IaC is **not available**.
-* Snyk AppRisk is **not availalbe**.
+* Snyk AppRisk is **not available**.
 
-## Authentication not available
+## API keys not available
 
-API keys are **not available**. The `auth_type` of `api_key` is not accepted. The OAuth protocol is used for all scenarios where API keys are typically used. See [Service accounts using OAuth 2.0](../enterprise-configuration/service-accounts/service-accounts-using-oauth-2.0.md) for details.
+API keys are not available.
 
-As Snyk for Government (US) does not support API keys, you cannot request the API to create a [service account](../enterprise-configuration/service-accounts/) that uses an API key.
+This means that attempts to create Service Accounts either through the UI or using the API with an `auth_type` of `api_key` are not accepted. You must ensure that the OAuth protocol is used instead for all scenarios where API keys would typically be used. See[ Service accounts using OAuth 2.0](https://docs.snyk.io/enterprise-configuration/service-accounts/service-accounts-using-oauth-2.0) for details. If you need help, contact [Snyk Support](https://support.snyk.io/hc/en-us).
 
-## Single Sign-On limitations on&#x20;
+In addition, the CLI must be used in OAuth mode, not with token-driven authentication.
+
+## Single Sign-On limitations on availability&#x20;
 
 [Single Sign-On (SSO)](../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/) is available except for [Self-Serve Single Sign-On (SSO)](../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/configure-self-serve-single-sign-on-sso/). All SSO setups are managed by Snyk. Some setup steps for Single Sign-On are slightly different:
 
 * The service provider is Okta rather than Auth0.
-* The ACS URL and Entity ID and certificate will be different per connection, and thus will not match the Snyk Single Sign-On documentation.
+* The ACS URL and Entity ID and certificate will be different per connection and thus will not match the Snyk Single Sign-On documentation.
 * To get the ACS Url, Entity ID, and cert, Snyk will need to part-provision the connection in Okta.
 
 See [Single Sign-On (SSO) for authentication to Snyk](../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/) for details.
@@ -43,12 +44,12 @@ See [Single Sign-On (SSO) for authentication to Snyk](../enterprise-configuratio
 ## Reporting and data not available
 
 * [Legacy reporting](../manage-issues/reporting/legacy-reports/)
-* [Enterprise Analytics](../manage-risk/analytics/enterprise-analytics.md)
-* [Insights](../manage-risk/snyk-apprisk/prioritization-with-insights-for-snyk-apprisk/using-the-insights-ui/)
+* [Issues Analytics](../manage-risk/enterprise-analytics/issues-analytics.md)
+* [Insights](../manage-risk/prioritize-issues-for-fixing/using-the-issues-ui-with-snyk-apprisk/)
 
 ## Platform features not available
 
-* [Bitbucket Cloud App](../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/snyk-bitbucket-cloud-app-integration.md)
+* [Bitbucket Cloud App](../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/bitbucket-cloud-app.md)
 * [Slack App](../integrate-with-snyk/jira-and-slack-integrations/slack-app.md)
 * [Jira App](../integrate-with-snyk/jira-and-slack-integrations/snyk-security-in-jira-cloud-integration.md)
 * [Snyk Advisor](https://snyk.io/advisor/)

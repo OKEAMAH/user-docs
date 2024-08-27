@@ -4,7 +4,7 @@ Snyk has several features to help you manage Application Security (AppSec) risk.
 
 ## Snyk AppRisk
 
-[Snyk AppRisk](snyk-apprisk/) enables Application Security teams to run a full developer security program, covering use cases under Application Security Posture Management (ASPM).&#x20;
+[Snyk AppRisk](../scan-using-snyk/snyk-apprisk/) enables Application Security teams to run a full developer security program, covering use cases under Application Security Posture Management (ASPM).&#x20;
 
 Snyk AppRisk provides:
 
@@ -14,7 +14,7 @@ Snyk AppRisk provides:
 
 ## Enterprise Analytics
 
-[Enterprise Analytics](analytics/) shows the performance of a company's Application Security program.&#x20;
+[Enterprise Analytics](enterprise-analytics/) shows the performance of a company's Application Security program.&#x20;
 
 Metrics are reported for the pillars: Exposure, Manage, Prevention, and Coverage. The breakdown of open issues over time is shown in these categories: Baseline, Preventable, Non-preventable, and Other new.&#x20;
 
@@ -30,6 +30,7 @@ The following reports are available:
 * Issues Summary
 * Vulnerabilities Detail
 * Cloud Compliance Issues
+* Developer IDE and CLI usage
 
 For more information, see [Available Snyk Reports](../manage-issues/reporting/available-snyk-reports.md).
 

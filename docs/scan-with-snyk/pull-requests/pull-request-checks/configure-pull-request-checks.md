@@ -10,8 +10,8 @@ PR Checks for Snyk Code are in [Closed Beta](../../../getting-started/snyk-relea
 
 To check for open-source and licensing issues and code security, ensure that you have established the following:
 
-* You have the Group Admin role so you have access to all integration settings. See [Member roles](../../../snyk-admin/manage-permissions-and-roles/user-role-management.md).
-* You have [set up a Git repository integration](../../../integrate-with-snyk/git-repositories-scms-integrations-with-snyk/). For help, see the Snyk Learn course [Source code manager configuration](https://learn.snyk.io/lesson/configure-snyk-scm/).
+* You have the Group Admin role so you have access to all integration settings. See [Member roles](../../../snyk-admin/user-roles/user-role-management.md).
+* You have [set up a Git repository integration](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/). For help, see the Snyk Learn course [Source code manager configuration](https://learn.snyk.io/lesson/configure-snyk-scm/).
 * [Import a Project](../../../getting-started/quickstart/import-a-project.md) to have a working Git repository.
 * For code security (Snyk Code), meet all of the above conditions and then contact your Snyk representative to enable the feature for you.
 
@@ -29,7 +29,7 @@ You can analyze the changed code with PR Checks as follows:
 * Snyk Open Source: Snyk analyzes dependency manifest or supported files for known security vulnerabilities that meet a threshold, such as exceeding severity, or checks to determine whether a fix is available.
 * Open Source license check: Snyk validates package licenses against the configured policy for license policy violations.
 
-PR Checks also support all programming languages and frameworks supported by the Snyk Code and Open Source engines. For more information, see programming language support for [Snyk Code](../../../getting-started/supported-languages-and-frameworks/#code-analysis-snyk-code) and [Open Source](../../../getting-started/supported-languages-and-frameworks/#open-source-and-licensing-snyk-open-source).
+PR Checks also support all programming languages and frameworks supported by the Snyk Code and Open Source engines. For more information, see programming language support for [Snyk Code](../../../supported-languages-package-managers-and-frameworks/#code-analysis-snyk-code) and [Open Source](../../../supported-languages-package-managers-and-frameworks/#open-source-and-licensing-snyk-open-source).
 
 ## How configuration of PR Checks works
 

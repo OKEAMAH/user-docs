@@ -3,7 +3,7 @@
 {% hint style="info" %}
 <mark style="color:red;">**The Code Agent is deprecated**</mark>. The preferred method of running Snyk Code analysis using Snyk Broker is through [Brokered Code](../install-and-configure-snyk-broker/advanced-configuration-for-snyk-broker-docker-installation/snyk-code-clone-capability-with-broker-for-docker.md).  The Code Agent is an alternative method without advantages. For details, contact your Snyk Integration Consultant or Technical Success Manager or contact [Snyk Support](https://support.snyk.io/hc/en-us).
 
-The automatic [PR Checks](../../../scan-with-snyk/pull-requests/pull-request-checks/) feature is not supported ifor Snyk Broker - Code Agent.
+The automatic [PR Checks](../../../scan-with-snyk/pull-requests/pull-request-checks/) feature is not supported for Snyk Broker - Code Agent.
 {% endhint %}
 
 To connect Snyk Code to your self-hosted Git server using Snyk Broker, you can add the Code Agent after installing Snyk Broker for your SCM.&#x20;
@@ -26,7 +26,7 @@ Deploying the Broker client and Code Agent creates two separate services. that, 
 
 You have installed a Broker client.
 
-The maximum file size you can import using the Code Agent deployment method is 1MB. For more information, see [File size limit for Snyk Code analysis](../../../getting-started/supported-languages-and-frameworks/technical-specifications.md#file-size-limit-for-snyk-code-analysis).
+The maximum file size you can import using the Code Agent deployment method is 1MB. For more information, see [File size limit for Snyk Code analysis](../../../supported-languages-package-managers-and-frameworks/technical-specifications.md#file-size-limit-for-snyk-code-analysis).
 
 You must have the ability to run a Docker Container, for example, by using a Docker Desktop or Kubernetes.
 

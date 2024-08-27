@@ -65,12 +65,12 @@ A representation of information flow involved in fixing one issue is presented i
 
 ## Requirements for DeepCode AI Fix
 
-* [Snyk Code Enterprise plan](../../../implement-snyk/enterprise-implementation-guide/trial-limitations.md).
-* Snyk IDE Plugin for  [VS Code](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner-preview) or [Eclipse](https://marketplace.eclipse.org/content/snyk-security-code%E2%80%8B-open-source%E2%80%8B-iac-configurations).
+* [Snyk Code](../../../implement-snyk/enterprise-implementation-guide/trial-limitations.md) enabled
+* Snyk IDE Plugin for  [VS Code](https://marketplace.visualstudio.com/items?itemName=snyk-security.snyk-vulnerability-scanner-preview), [Eclipse](https://marketplace.eclipse.org/content/snyk-security-code%E2%80%8B-open-source%E2%80%8B-iac-configurations), or [JetBrains IDEs including IntelliJ](../../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/jetbrains-plugins/)
 
 ## Enable DeepCode AI Fix
 
-Enable DeepCode AI Fix  for your Organization in Snyk Web UI by navigating to **Settings** > **Snyk Preview**.
+Enable DeepCode AI Fix for your Group or Organization in the Snyk Web UI by navigating to **Group/Organization** > **Settings** > **Snyk Preview**.
 
 <figure><img src="../../../.gitbook/assets/enable_fix_suggestions_snyk_preview.png" alt="DeepCodeAI Fix Suggestions settings in Snyk Preview"><figcaption><p>DeepCodeAI Fix Suggestions settings in Snyk Preview</p></figcaption></figure>
 
@@ -79,13 +79,13 @@ Enable DeepCode AI Fix  for your Organization in Snyk Web UI by navigating to **
 {% hint style="info" %}
 **Before you begin**
 
-* Make sure you have Snyk IDE with Automated fixes.
+* Ensure you have automated fixes enabled in Snyk Preview to work with your [Snyk IDE plugin or extension](../../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/).
 * Save the files and [scan your code](../../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/scan-source-code-with-snyk-code-using-the-cli.md) to generate a fresh set of results.
-* You should see a zap icon:zap:next to all Snyk Code issues that can be automatically fixed.
+* You should see a zap icon :zap: next to all Snyk Code issues that can be automatically fixed.
 {% endhint %}
 
 1. Open your code base.
-2. Find and fix issues through the panel or by clicking **Fix this issue** in Code Lens.
+2. Find and fix issues **through the panel** or by clicking **Fix this issue** in Code Lens.
 3. After a fix has been applied,  save and rescan.
 
 ## Example: Fix a code issue automatically
@@ -102,7 +102,14 @@ The result, in this case, is 5 fixes, which you can navigate through to decide w
 
 <figure><img src="../../../.gitbook/assets/image (443).png" alt=""><figcaption><p>5 fixes have been generated</p></figcaption></figure>
 
-When you apply the fix in Code Lens, you will be guided to where the new code has been introduced. After you save and rescan, the vulnerability will disappear.
+When you apply the fix, you will be guided to where the new code has been introduced. After you save and rescan, the vulnerability will disappear.
 
 <figure><img src="../../../.gitbook/assets/image (447).png" alt=""><figcaption><p>Vulnerability has been fixed</p></figcaption></figure>
 
+## Known limitations&#x20;
+
+DeepCode AI Fix is at the forefront of AI but there are still limitations based on the AI engine. Users must always review AI Fix suggestions to ensure that the resulting implementation of the fix does not break their application&#x20;
+
+* DeepCode AI Fix suggestions might generate code that results in the application's not working properly&#x20;
+* DeepCode AI Fix suggestions might generate code that is not syntactically correct&#x20;
+* DeepCode AI Fix verifies that the vulnerability is fixed and no new vulnerabilities are introduced. This means that sometimes, a valid suggestion will not be made because the AI engine has not generated a good enough result.

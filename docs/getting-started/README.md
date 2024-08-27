@@ -26,7 +26,7 @@ You can run Snyk in the following ways:
 
 * [**Web**](snyk-web-ui.md): the Snyk Web UI ([app.snyk.io](https://app.snyk.io)) provides a browser-based experience with functions such as configuration settings, filtering and fixing discovered issues, and reports.
 * [**CLI**](../snyk-cli/): the Snyk Command Line Interface enables you to run vulnerability scans on your local machine and integrate Snyk into your pipeline.
-* [**IDEs**](../integrate-with-snyk/use-snyk-in-your-ide/): the Snyk IDE integrations enable you to embed Snyk in your development environment.
+* [**IDEs**](../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/): the Snyk IDE integrations enable you to embed Snyk in your development environment.
 * [**API**](../snyk-api/): the Snyk API enables you to integrate with Snyk programmatically, tuning Snyk security automation to your specific workflows.
 
 This video shows using the CLI to scan for vulnerabilities.
@@ -39,8 +39,8 @@ Running Snyk from the command line.
 
 The Snyk tech stacks that are supported depend on the Snyk product you use:
 
-* **Snyk Open Source** and **Snyk Code**: see [Supported languages and frameworks](supported-languages-and-frameworks/).
-* **Snyk Container**: see [Supported operating system distributions](../scan-with-snyk/snyk-container/how-snyk-container-works/supported-operating-system-distributions.md).
+* **Snyk Open Source** and **Snyk Code**: see [Supported languages and frameworks](../supported-languages-package-managers-and-frameworks/).
+* **Snyk Container**: see [Supported operating system distributions](../scan-using-snyk/snyk-container/how-snyk-container-works/operating-system-distributions-supported-by-snyk-container.md).
 * **Snyk Infrastructure as Code**: see [Supported IaC and cloud providers](../scan-with-snyk/snyk-iac/supported-iac-languages-cloud-providers-and-cloud-resources/).
 
 ## What can Snyk integrate with?
@@ -51,9 +51,11 @@ See [Integrate with Snyk](../integrate-with-snyk/) for details.
 
 ## **What does Snyk cost?**
 
-Snyk has several pricing plans available, from free to Enterprise. See [Snyk Pricing Plans](../implement-snyk/enterprise-implementation-guide/trial-limitations.md).
+Snyk has several pricing plans available, from free to Enterprise. See [Snyk Pricing Plans](https://snyk.io/plans/).
+
+Snyk offers a trial of the platform, but this has imposed feature limitations. See [Trial limitations](https://docs.snyk.io/implement-snyk/enterprise-implementation-guide/trial-limitations).
 
 ## What happens to my data?
 
-See [How Snyk handles your data](../working-with-snyk/how-snyk-handles-your-data.md) for details of Snyk data handling.&#x20;
+See [How Snyk handles your data](../working-with-snyk/how-snyk-handles-your-data.md) for details of Snyk data handling.
 

@@ -16,7 +16,7 @@ From the Group settings menu, select **Settings** and then select one of the Gro
 
 * **General**: See [Group general settings](groups/group-general-settings.md) for details.
 * &#x20;**SSO**: See [Self-Serve Single Sign-On (SSO)](../../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/configure-self-serve-single-sign-on-sso/) for details.
-* **Member Roles**: See [Manage Member Roles](../manage-permissions-and-roles/user-role-management.md) for details.
+* **Member Roles**: See [Manage Member Roles](../user-roles/user-role-management.md) for details.
 * **Service Accounts**: See [Service accounts](../../enterprise-configuration/service-accounts/) for details.
 * **Notifications**: See [Manage notifications](../manage-notifications.md) for details.
 * **Usage**: See [Usage setting](usage-settings.md)s for details.
@@ -40,7 +40,7 @@ From the Organization setting menu, select **Settings** and then select one of t
 * **General**: See [Organization general settings](organizations/organization-general-settings.md) for details.
 * **Service Accounts**: See [Service accounts](../../enterprise-configuration/service-accounts/) for details.
 * **Integrations**: Set up integrations and see a list of those configured for your Organization; click the name of the configured integration to see the details. See [Integrate with Snyk](https://docs.snyk.io/integrations) for information about available Snyk integrations.
-* &#x20;**Languages**: Enable Reachable vulnerabilities analysis and edit language settings; see [Snyk Open Source - supported languages and package managers](../../getting-started/supported-languages-and-frameworks/) for details.
+* &#x20;**Languages**: Enable Reachable vulnerabilities analysis and edit language settings; see [Snyk Open Source - supported languages and package managers](../../supported-languages-package-managers-and-frameworks/) for details.
 * **Snyk Code**: Enable Snyk Code; see the [Snyk Code](../../scan-with-snyk/snyk-code/) documentation for details.
 * **Snyk Iac:** Enable Snyk Iac, detecting configuration files, and rules. Select severity levels for configurations scanned. See the [IaC ](../../scan-with-snyk/snyk-iac/scan-your-iac-source-code/)documentation for details.
 * **Usage**: See the [Usage settings](usage-settings.md) page for details.

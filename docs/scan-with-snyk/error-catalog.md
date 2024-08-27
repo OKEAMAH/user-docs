@@ -3,6 +3,236 @@
 The error codes in the table below describe the codes that you may encounter while working with the [Snyk API](../snyk-api/README.md) or [CLI](../snyk-cli/README.md). When errors are encountered using the API, they will also have an appropriate [HTTP status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). If you encounter errors without an error code, use the HTTP status code to determine the appropriate action.
 
 ---
+# Fix
+### [PR-FAILURES-0001](#pr-failures-0001)
+
+#### Fix scenario not supported
+
+Snyk failed to open a fix PR as the scenario is not supported.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
+### [PR-FAILURES-0002](#pr-failures-0002)
+
+#### SCM rate limit
+
+SCM rate limit exceeded due to too many requests.
+
+**HTTP Status:** [429](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)
+
+
+### [PR-FAILURES-0003](#pr-failures-0003)
+
+#### Unauthorised access
+
+Request failed due to unathorised access. Please read documentation around adding users and permitted roles.
+
+**HTTP Status:** [403](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-admin/groups-and-organizations/organizations/manage-users-in-organizations](https://docs.snyk.io/snyk-admin/groups-and-organizations/organizations/manage-users-in-organizations)
+
+### [SNYK-PACKAGES-0001](#snyk-packages-0001)
+
+#### Unsupported ecosystem
+
+The language or package manager is not supported. Please refer to the supported package managers in the documentation.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-using-snyk/pull-requests/snyk-fix-pull-or-merge-requests/upgrade-dependencies-with-automatic-prs/upgrade-open-source-dependencies-with-automatic-prs#supported-languages-and-scms](https://docs.snyk.io/scan-using-snyk/pull-requests/snyk-fix-pull-or-merge-requests/upgrade-dependencies-with-automatic-prs/upgrade-open-source-dependencies-with-automatic-prs#supported-languages-and-scms)
+
+### [SNYK-PACKAGES-0003](#snyk-packages-0003)
+
+#### Metadata not found
+
+Package metadata not or found or missing.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-using-snyk/pull-requests/snyk-fix-pull-or-merge-requests/upgrade-dependencies-with-automatic-prs/upgrade-private-dependencies-with-automatic-prs#private-packages-api](https://docs.snyk.io/scan-using-snyk/pull-requests/snyk-fix-pull-or-merge-requests/upgrade-dependencies-with-automatic-prs/upgrade-private-dependencies-with-automatic-prs#private-packages-api)
+
+### [SNYK-PACKAGES-0005](#snyk-packages-0005)
+
+#### No mature versions found for package
+
+Unable to provide a recommended version as no mature versions were found.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-PACKAGES-0006](#snyk-packages-0006)
+
+#### No recommended version found
+
+Unable to provide a recommended version for package using this policy.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-PACKAGES-0007](#snyk-packages-0007)
+
+#### Package is already at latest version
+
+No newer version found for this package, as it is already to latest version.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-PACKAGES-0008](#snyk-packages-0008)
+
+#### Version downgrade is not supported
+
+Unable to suggest a downgrade for a package version.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+
+### [SNYK-PACKAGES-0009](#snyk-packages-0009)
+
+#### Invalid version
+
+Not a valid version for semver format.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+**Help Links:**
+- [https://semver.org/](https://semver.org/)
+
+### [SNYK-PR-TEMPLATE-0001](#snyk-pr-template-0001)
+
+#### Failed to get pull request attributes
+
+Snyk could not get the custom pull request template attributes, using the given variables and the fetched pr template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0002](#snyk-pr-template-0002)
+
+#### Not found
+
+We could not find your pull request template, have you created one yet? Please check the attached link for instructions on how to setup your pull request template.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0003](#snyk-pr-template-0003)
+
+#### Failed to compile pull request template
+
+Could not compile your customize pull request template. Please check for syntax errors using the Snyk variables inside the template.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0004](#snyk-pr-template-0004)
+
+#### Failed to parse pull request attributes
+
+Snyk could not parse the custom pull request template, using the given variables and assigning them to the fetched pr template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0005](#snyk-pr-template-0005)
+
+#### Failed to load YAML file after substituting Snyk variables
+
+Could not load YAML file after substituting Snyk variables into the custom PR template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0006](#snyk-pr-template-0006)
+
+#### Failed to generate hash for custom PR template
+
+Snyk could not generate hash using the customer PR files and projects vulnIds.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0007](#snyk-pr-template-0007)
+
+#### Unable to create pull request template
+
+Snyk could not create pull request template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0008](#snyk-pr-template-0008)
+
+#### Unable to get pull request template
+
+Snyk could not get pull request template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0009](#snyk-pr-template-0009)
+
+#### Unable to delete pull request template
+
+Snyk could not delete pull request template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0010](#snyk-pr-template-0010)
+
+#### Invalid payload
+
+The pull request template payload is invalid.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-PR-TEMPLATE-0011](#snyk-pr-template-0011)
+
+#### Failed to load JSON file after substituting Snyk variables
+
+Could not load JSON file after substituting Snyk variables into the custom PR template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+### [SNYK-PR-TEMPLATE-0012](#snyk-pr-template-0012)
+
+#### Failed to render default PR template
+
+Could not render default PR template.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+**Help Links:**
+- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+
+---
 # Snyk
 ### [SNYK-0001](#snyk-0001)
 
@@ -127,7 +357,7 @@ Provide an ORG ID or GROUP ID.
 
 The project could not be found. Check that the project exists, that you have access to the project, and also check that the ID you have provided is the project ID and not a CBI ID.
 
-**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
 
 
 ### [SNYK-CBI-0004](#snyk-cbi-0004)
@@ -275,6 +505,52 @@ An internal error occurred while trying to retrieve the image collection. Try ag
 **Help Links:**
 - [https://status.snyk.io/](https://status.snyk.io/)
 
+### [SNYK-CBI-0019](#snyk-cbi-0019)
+
+#### Unable to create versioning schema
+
+The provided versioning schema is invalid and image could therefor not be created. Provide a properly formatted versioning schema and try again.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+
+---
+# CLI
+### [SNYK-CLI-0001](#snyk-cli-0001)
+
+#### Unable to set environment
+
+The specified environment cannot be used. As a result, the configuration remains unchanged.Provide the correct specifications for the environment and try again.
+
+**HTTP Status:** [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-cli/commands/config-environment](https://docs.snyk.io/snyk-cli/commands/config-environment)
+
+### [SNYK-CLI-0002](#snyk-cli-0002)
+
+#### Possible inconsistent configuration
+
+You can configure the CLI in different ways, for example via Environment Variables or configuration file.
+If one parameter is configured multiple times, it is probably unintentional and might cause unexpected behaviour.
+Review configured environment variables and ensure that everything is intentional. If so, you can skip this check by using --no-check.
+
+**HTTP Status:** [200](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/200)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-cli/commands/config-environment](https://docs.snyk.io/snyk-cli/commands/config-environment)
+
+### [SNYK-OS-7001](#snyk-os-7001)
+
+#### Request to Snyk API timeout
+
+A request to the Snyk API has unexpectedly timeout. Check Snyk status, then try again.
+
+**HTTP Status:** [504](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504)
+
+**Help Links:**
+- [https://status.snyk.io/](https://status.snyk.io/)
+
 ---
 # Code
 ### [SNYK-CODE-0001](#snyk-code-0001)
@@ -353,6 +629,19 @@ Snyk was unable to find supported files.
 
 **Help Links:**
 - [https://docs.snyk.io/getting-started/supported-languages-frameworks-and-feature-availability-overview#code-analysis-snyk-code](https://docs.snyk.io/getting-started/supported-languages-frameworks-and-feature-availability-overview#code-analysis-snyk-code)
+
+---
+# Integration
+### [SNYK-INTEGRATION-0001](#snyk-integration-0001)
+
+#### SCM integration not found
+
+Ensure your SCM integration exists and that it is correctly set up.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+**Help Links:**
+- [https://docs.snyk.io/scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations](https://docs.snyk.io/scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations)
 
 ---
 # OpenAPI
@@ -506,6 +795,30 @@ Could not get the file from the source URL.
 The server encountered a critical operation that requires a specific environment variable, but the variable is not set or is not accessible within the current environment.
 
 **HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-OS-0009](#snyk-os-0009)
+
+#### Brokered connections not currently supported
+
+The service encountered a permissions or credentials error most likely related to an import through a brokered connection for a scanner that does not yet support that.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-OS-0010](#snyk-os-0010)
+
+#### Snyk failed to clone your repository
+
+We encountered a fatal error from Git while trying to clone your code using your provided credentials. Please verify that:
+
+* Your provided credentials are correct or not scoped too narrowly.
+* The branch you've asked us to clone exists.
+* The repository you've provided is accessible from the internet is you are not connected through a broker.
+
+And try the operation again.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 
 
 ### [SNYK-OS-DOTNET-0001](#snyk-os-dotnet-0001)
@@ -733,6 +1046,21 @@ Which will allow Snyk to scan your code using a newer version of the SDK, despit
 - [https://versionsof.net/core/](https://versionsof.net/core/)
 - [https://dotnet.microsoft.com/en-us/download/dotnet](https://dotnet.microsoft.com/en-us/download/dotnet)
 - [https://learn.microsoft.com/en-us/dotnet/core/tools/global-json#rollforward](https://learn.microsoft.com/en-us/dotnet/core/tools/global-json#rollforward)
+
+### [SNYK-OS-DOTNET-0009](#snyk-os-dotnet-0009)
+
+#### Project failed to build due to missing type or namespace references
+
+While attempting to build your solution for scanning, the `dotnet` SDK was unable to restore one or more projects referenced in your manifest files.
+
+Please note that Snyk runs these builds on a **case-sensitive** filesystem, meaning that `<ProjectReference>../src/NS.Project.csproj</ProjectReference>` and `<ProjectReference>../src/ns.project.csproj</ProjectReference>` are not referring to the same thing.
+
+This can present itself as a problem for customers that are using Mac or Windows build pipeline where file systems are not case-sensitive. In this case, verify you're referring to the right manifest files and check the Snyk import logs for more details.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/assembly-references#missing-references)
 
 ### [SNYK-OS-GO-0001](#snyk-os-go-0001)
 
@@ -1182,6 +1510,42 @@ The lockfile version is not supported. Supported lockfile versions for pnpm incl
 **HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 
 
+### [SNYK-OS-NODEJS-0019](#snyk-os-nodejs-0019)
+
+#### Yarn package not found
+
+Snyk could not find the package in the Yarn registry.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-OS-NODEJS-0020](#snyk-os-nodejs-0020)
+
+#### Unable to reach package registry
+
+Snyk could not reach the node package registry.
+
+**HTTP Status:** [503](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503)
+
+
+### [SNYK-OS-NODEJS-0021](#snyk-os-nodejs-0021)
+
+#### Lock file is outdated
+
+The lock file is outdated. Update the lock file and try again.
+
+**HTTP Status:** [409](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409)
+
+
+### [SNYK-OS-NODEJS-0022](#snyk-os-nodejs-0022)
+
+#### Unable to read from remote repository
+
+Snyk does not have sufficient permissions to access the repository, or the repository does not exist.
+
+**HTTP Status:** [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401)
+
+
 ### [SNYK-OS-PYTHON-0001](#snyk-os-python-0001)
 
 #### Unsupported manifest file type for remediation
@@ -1291,19 +1655,6 @@ Make sure to use the correct python version in the requires section of the Pipfi
 
 **HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 
-
----
-# CLI
-### [SNYK-OS-7001](#snyk-os-7001)
-
-#### Request to Snyk API timeout
-
-A request to the Snyk API has unexpectedly timeout. Check Snyk status, then try again.
-
-**HTTP Status:** [504](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/504)
-
-**Help Links:**
-- [https://status.snyk.io/](https://status.snyk.io/)
 
 ---
 # Builds
@@ -1627,6 +1978,15 @@ The given Package URL does not contain a supported vendor. Please use one of the
 **HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
 
 
+### [SNYK-OSSI-2048](#snyk-ossi-2048)
+
+#### Unsupported Alpine distro
+
+This Alpine distro is currently not supported.
+
+**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
+
+
 ---
 # Open Source Project Issues
 ### [SNYK-OSSI-OSPI-1001](#snyk-ossi-ospi-1001)
@@ -1876,135 +2236,196 @@ Occasionally you might see a "Failed to generate a commit status" which may bloc
 
 
 ---
-# Fix
-### [SNYK-PR-TEMPLATE-0001](#snyk-pr-template-0001)
+# SBOM Test
+### [SNYK-SBOM-0001](#snyk-sbom-0001)
 
-#### Failed to get pull request attributes
+#### SBOM test error
 
-Snyk could not get the custom pull request template attributes, using the given variables and the fetched pr template.
+An unexpected error occurred. Review the request, then try again. If the error persists, contact Snyk Support.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-SBOM-0002](#snyk-sbom-0002)
+
+#### Organization ID mismatch
+
+The requested organization ID does not match the owner of the SBOM test ID.
+
+This error occurs when the supplied organization ID is different to the one used when creating an SBOM test run.
+Ensure the organization ID used to make the request is the same as the the organization ID used to create the SBOM test.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-SBOM-0003](#snyk-sbom-0003)
+
+#### Unable to find SBOM test
+
+Snyk was unable to find the requested SBOM test.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-SBOM-0004](#snyk-sbom-0004)
+
+#### SBOM test failed
+
+The SBOM test failed and does not have any results.
+
+This error occurs when results for a failed SBOM test are being requested.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-SBOM-0005](#snyk-sbom-0005)
+
+#### SBOM test results still pending
+
+The SBOM test is still processing and does not have any results yet.
+
+This error occurs when the results for an SBOM test have been requested, but the SBOM test is still being processed.
+
+**HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
+
+
+### [SNYK-SBOM-0006](#snyk-sbom-0006)
+
+#### Unknown SBOM format
+
+Snyk does not recognize the SBOM file format.
+
+Provide an SBOM document with a supported format.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-cli/commands/sbom-test](https://docs.snyk.io/snyk-cli/commands/sbom-test)
+
+### [SNYK-SBOM-0007](#snyk-sbom-0007)
+
+#### Unable to process SBOM input
+
+Snyk is unable to decode the SBOM file. Provide a valid SBOM document and try again.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-cli/commands/sbom-test](https://docs.snyk.io/snyk-cli/commands/sbom-test)
+
+### [SNYK-SBOM-0008](#snyk-sbom-0008)
+
+#### SBOM format not supported
+
+Provide a supported format of the SBOM document and try again.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://docs.snyk.io/snyk-cli/commands/sbom-test](https://docs.snyk.io/snyk-cli/commands/sbom-test)
+
+### [SNYK-SBOM-0009](#snyk-sbom-0009)
+
+#### SBOM analysis failed
+
+Snyk was unable to process the provided SBOM input and is unable to scan it for issues.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
+### [SNYK-SBOM-0010](#snyk-sbom-0010)
+
+#### No testable packages found
+
+The SBOM document you provided does not contain any packages supported by Snyk vulnerability analysis, or it does not contain any package.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
+---
+# SCM
+### [SNYK-SCM-0001](#snyk-scm-0001)
+
+#### Integration type not supported
+
+The integration you provided does not support SCM repository access.
 
 **HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
 
 **Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+- [https://docs.snyk.io/scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations](https://docs.snyk.io/scm-ide-and-ci-cd-workflow-and-integrations/snyk-scm-integrations)
 
-### [SNYK-PR-TEMPLATE-0002](#snyk-pr-template-0002)
+### [SNYK-SCM-0002](#snyk-scm-0002)
 
-#### Not found
+#### Revision cannot be resolved
 
-We could not find your pull request template, have you created one yet? Please check the attached link for instructions on how to setup your pull request template.
+Snyk was unable to resolve the SCM revision you provided. Provide a valid revision, either a full commit ID or an existing commit reference.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+
+### [SNYK-SCM-0003](#snyk-scm-0003)
+
+#### Integration authentication failed
+
+Snyk was unable to authenticate with your SCM provider. Ensure you are using valid credentials for the Snyk integration.
+
+**HTTP Status:** [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401)
+
+
+### [SNYK-SCM-0004](#snyk-scm-0004)
+
+#### Integration authorization failed
+
+Snyk was unable to authorize with your SCM provider. If your Organization has SAML SSO enabled or enforced, re-authorize the OAuth Application `Snyk`.
+
+**HTTP Status:** [401](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401)
+
+
+### [SNYK-SCM-0005](#snyk-scm-0005)
+
+#### Too many files
+
+Snyk was unable to retrieve the repository because the overall file count exceeds the limit of 40000.
+
+To reduce the file count, use a `.snyk` file to ignore certain directories or files. Alternatively, analyze individual work subdirectories separately.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+### [SNYK-SCM-0006](#snyk-scm-0006)
+
+#### Repository size too large
+
+Snyk was unable to retrieve the repository because the size of the repository exceeds 15 GB.
+
+To reduce the overall size of the repository, use a a `.snyk` file to ignore certain directories or files. Alternatively, analyze individual work subdirectories separately.
+
+**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+
+
+---
+# Target
+### [SNYK-TARGET-0001](#snyk-target-0001)
+
+#### Target not found
+
+Snyk was unable to resolve the imported target. Ensure that Snyk created the target and try again.
 
 **HTTP Status:** [404](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404)
 
 **Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+- [https://docs.snyk.io/snyk-admin/snyk-projects#target](https://docs.snyk.io/snyk-admin/snyk-projects#target)
 
-### [SNYK-PR-TEMPLATE-0003](#snyk-pr-template-0003)
+### [SNYK-TARGET-0002](#snyk-target-0002)
 
-#### Failed to compile pull request template
+#### No unique target found
 
-Could not compile your customize pull request template. Please check for syntax errors using the Snyk variables inside the template.
+Snyk was unable to resolve a single target. Snyk found multiple targets configured for the same integration and repository URL pair. Ensure a unique target exists.
 
-**HTTP Status:** [400](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0004](#snyk-pr-template-0004)
-
-#### Failed to parse pull request attributes
-
-Snyk could not parse the custom pull request template, using the given variables and assigning them to the fetched pr template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 
 **Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
+- [https://docs.snyk.io/snyk-admin/snyk-projects#target](https://docs.snyk.io/snyk-admin/snyk-projects#target)
 
-### [SNYK-PR-TEMPLATE-0005](#snyk-pr-template-0005)
-
-#### Failed to load YAML file after substituting Snyk variables
-
-Could not load YAML file after substituting Snyk variables into the custom PR template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0006](#snyk-pr-template-0006)
-
-#### Failed to generate hash for custom PR template
-
-Snyk could not generate hash using the customer PR files and projects vulnIds.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0007](#snyk-pr-template-0007)
-
-#### Unable to create pull request template
-
-Snyk could not create pull request template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0008](#snyk-pr-template-0008)
-
-#### Unable to get pull request template
-
-Snyk could not get pull request template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0009](#snyk-pr-template-0009)
-
-#### Unable to delete pull request template
-
-Snyk could not delete pull request template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0010](#snyk-pr-template-0010)
-
-#### Invalid payload
-
-The pull request template payload is invalid.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-
-### [SNYK-PR-TEMPLATE-0011](#snyk-pr-template-0011)
-
-#### Failed to load JSON file after substituting Snyk variables
-
-Could not load JSON file after substituting Snyk variables into the custom PR template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
-### [SNYK-PR-TEMPLATE-0012](#snyk-pr-template-0012)
-
-#### Failed to render default PR template
-
-Could not render default PR template.
-
-**HTTP Status:** [500](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500)
-
-**Help Links:**
-- [https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta](https://docs.snyk.io/scan-application-code/snyk-open-source/open-source-basics/customize-pr-templates-closed-beta)
-
---- Generated at 2024-06-05T09:11:37.301Z
+--- Generated at 2024-08-26T08:18:08.355Z
