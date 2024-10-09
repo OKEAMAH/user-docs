@@ -23,9 +23,9 @@ GitHub Enterprise integration is available to Snyk Enterprise plan customers. If
 ### Prerequisites for GitHub Enterprise integration
 
 * Internet-accessible repositories.\
-  If your repositories are not internet-accessible, you must use [Snyk Broker](../../enterprise-configuration/snyk-broker/). This requires creating a startup script. For the script and instructions, see [GitHub Enterprise - install and configure using Docker](../../enterprise-configuration/snyk-broker/install-and-configure-snyk-broker/github-enterprise-prerequisites-and-steps-to-install-and-configure-broker/setup-broker-with-github-enterprise.md).
+  If your repositories are not internet-accessible, you must use [Snyk Broker](../../enterprise-setup/snyk-broker/). This requires creating a startup script. For the script and instructions, see [GitHub Enterprise - install and configure using Docker](../../enterprise-setup/snyk-broker/install-and-configure-snyk-broker/github-enterprise-prerequisites-and-steps-to-install-and-configure-broker/setup-broker-with-github-enterprise.md).
 * A public or private GitHub project.
-* The required [PAT](github-enterprise.md#how-to-generate-a-personal-access-token) and GitHub repository access scope permissions. For more information, see [GitHub and GitHub Enterprise permissions requirements](./#github-and-github-enterprise-permissions-requirements).
+* The required [PAT](github-enterprise.md#how-to-generate-a-personal-access-token) and GitHub repository access scope permissions. For more information, see [GitHub and GitHub Enterprise permission requirements](./#github-and-github-enterprise-permission-requirements).
 
 {% hint style="info" %}
 You do not need to be on a GitHub Enterprise level plan to use the Snyk GitHub Enterprise integration.
@@ -203,6 +203,10 @@ If you used GitHub Apps for your SCM integrations at the Snyk Organization level
 * Builds - only when using GitHub Actions.
 * Scans - only when using Code security.
 
+#### Prerequisites&#x20;
+
+Ensure you meet all prerequisites listed on the [GitHub and GitHub Enterprise permission requirements](./#github-and-github-enterprise-permission-requirements) page.
+
 #### Integrate GitHub using Snyk AppRisk <a href="#github-integrate-using-snyk-apprisk" id="github-integrate-using-snyk-apprisk"></a>
 
 1. Profile name (`mandatory`): Input your integration profile name.&#x20;
@@ -218,12 +222,18 @@ If you have changed the name of your GitHub organization, copy the new name from
 * Authorize your GitHub PAT if you have configured SAML SSO. See the [How to authorize your Personal Access Token and enable SSO](github-enterprise.md#how-to-authorize-your-personal-access-token-and-enable-sso) page for more details.
 
 {% hint style="info" %}
-If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page.
+If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-setup/snyk-broker/snyk-broker-apprisk.md) page.
 {% endhint %}
 
 4. API URL (`mandatory`) - Input the API URL. The default URL is `https://api.github.com`.
 5. Pull personal repositories (`optional`): Enable the option if you only want to pull the repositories you own.
-6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
+6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations/) page.
+
+{% hint style="warning" %}
+If you enabled the **Pull personal repositories** option, only your personal repositories are pulled, not the public ones.&#x20;
+
+If you want to pull data from both organization and personal repositories, then you must set up separate profiles.
+{% endhint %}
 
 #### Generate a Personal access token from your GitHub settings
 

@@ -16,7 +16,7 @@ There is no specific template functionality in Snyk. The recommended process is 
 
 {% hint style="info" %}
 **Creating a template using the API**\
-Templating functionality is also available if you are creating your Organizations using the API, whether you are using the [snyk-api-import](../../../../scan-using-snyk/snyk-tools/tool-snyk-api-import/) tool to mirror an Organization from an existing source, such as GitHub Organizations, or using the [API endpoints](https://snyk.docs.apiary.io/#reference/organizations/create-organization/create-a-new-organization) by providing a `sourceOrgId`.
+Templating functionality is also available if you are creating your Organizations using the API, whether you are using the [snyk-api-import](../../../../scan-with-snyk/snyk-tools/tool-snyk-api-import/) tool to mirror an Organization from an existing source, such as GitHub Organizations, or using the endpoint [Cerate a new organization](../../../../snyk-api/reference/organizations-v1.md#org) and providing a `sourceOrgId`.
 {% endhint %}
 
 ## Configure template Organization settings
@@ -24,7 +24,7 @@ Templating functionality is also available if you are creating your Organization
 In your template Organization, configure a range of settings that you can choose to copy when creating your full Organization structure:
 
 * All relevant integrations, for example, GitHub Enterprise, Docker Hub.\
-  Note: If you have on-premise source code management tools, you must configure and run [Snyk Broker](../../../../enterprise-configuration/snyk-broker/) to enable the integration.
+  Note: If you have on-premise source code management tools, you must configure and run [Snyk Broker](../../../../enterprise-setup/snyk-broker/) to enable the integration.
 * Integration settings, for example, configuring whether you want Snyk to run tests on PRs.
   * The default settings for a new Git repository integration include Snyk running tests on newly raised PRs and the option to automatically raise PRs when new vulnerabilities are found. Snyk recommends disabling these settings initially and turning them on when you are ready to introduce these features in the [Prevention Stage](../../phase-6-rolling-out-the-prevention-stage/).
   * The following [Integrations](configure-integrations.md) section discusses integrations you may want to add to your templates before copying them.

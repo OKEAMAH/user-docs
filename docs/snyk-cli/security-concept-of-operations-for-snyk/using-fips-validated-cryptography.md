@@ -13,7 +13,7 @@ Support for use of FIPS-validated cryptography is limited to the Windows and Lin
 
 ## FIPS-validated cryptography support and use in the Snyk CLI and Snyk Language Server
 
-To optimize the developer experience, Snyk is combining the [Snyk Language Server](../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/snyk-language-server.md) and the [Snyk CLI](../getting-started-with-the-snyk-cli.md). As a first step, Snyk is bringing FIPS binaries under one application. Later also non-FIPS CLI binaries will be used for Snyk Language Server.
+To optimize the developer experience, Snyk is combining the [Snyk Language Server](../../scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/snyk-language-server/) and the [Snyk CLI](../getting-started-with-the-snyk-cli.md). As a first step, Snyk is bringing FIPS binaries under one application. Later also non-FIPS CLI binaries will be used for Snyk Language Server.
 
 The Snyk Language Server can now be executed as a CLI command.
 
@@ -44,11 +44,11 @@ For testing, FIPS can be enabled using the following registry key   `HKLM\SYSTEM
 
 #### Download FIPS-enabled binaries
 
-Snyk binaries are available with and without FIPS support. They are all hosted on static.snyk.io, differentiated by their Base URL.
+Snyk binaries are available with and without FIPS support. They are all hosted on downloads.snyk.io, differentiated by their Base URL.
 
-**FIPS Base URL:** https://static.snyk.io/fips/
+**FIPS Base URL:** https://downloads.snyk.io/fips/
 
-**Regular Base URL:** https://static.snyk.io/
+**Regular Base URL:** https://downloads.snyk.io/
 
 All instructions on [how to install and use Snyk](../install-or-update-the-snyk-cli/) remain the same. The only required change is using the appropriate Base URL.
 
@@ -59,7 +59,7 @@ The example that follows uses a [Microsoft Mariner](https://mcr.microsoft.com/en
 ```bash
 docker run -it mcr.microsoft.com/cbl-mariner/base/core:2.0 bash
 > tdnf install -y ca-certificates
-> curl --compressed https://static.snyk.io/fips/cli/latest/snyk-linux-arm64 -o snyk
+> curl --compressed https://downloads.snyk.io/fips/cli/latest/snyk-linux-arm64 -o snyk
 > chmod +x snyk
 > ./snyk -d
 ...
@@ -119,4 +119,4 @@ FIPS in [CI/CD Integrations](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-int
 
 ## FIPS-validated cryptography support and use in Package Repositories
 
-The [Snyk Nexus Repository Manager Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md) and the [Artifactory Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) use the Snyk API and run on a Java VM. To make use of FIPS-validated cryptography, configure the Java Runtime to use a FIPS-validated[ JCE (Java Cryptography Extension)](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic\&ModuleName=java\&CertificateStatus=Active\&ValidationYear=0).
+The [Snyk Nexus Repository Manager Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md) and the [Artifactory Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) use the Snyk API and run on a Java VM. To make use of FIPS-validated cryptography, configure the Java Runtime to use a FIPS-validated[ JCE (Java Cryptography Extension)](https://csrc.nist.gov/projects/cryptographic-module-validation-program/validated-modules/search?SearchMode=Basic\&ModuleName=java\&CertificateStatus=Active\&ValidationYear=0).

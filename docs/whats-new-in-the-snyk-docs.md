@@ -7,23 +7,94 @@ coverY: 0
 
 The most recent updates include significant changes to the user docs, such as features added or removed, structure changes that affect how you find relevant information, and other improvements aimed at enhancing your interaction with the Snyk knowledge base.
 
+## September 2024
+
+### **Snyk API**&#x20;
+
+* Most links to APIs have been updated on the docs site.
+* Additional entries were made on the [API docs index page](snyk-api/api-endpoints-index-and-notes/).
+* [Regional URLs for APIs](snyk-api/rest-api/about-the-rest-api.md#api-url) were updated.
+
+### &#x20;**Snyk AppRisk**&#x20;
+
+* A prerequisites section has been added to the Group level of [GitHub integration](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/github-enterprise.md#prerequisites), and more details about the [Pull personal repositories](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/github-enterprise.md#github-integrate-using-snyk-apprisk) option have been added to the same documentation page.&#x20;
+* The [Set up Insights for Snyk AppRisk ](manage-risk/prioritize-issues-for-fixing/set-up-insights-for-snyk-apprisk/)section was updated to emphasize the risk factors availability for each integration option.
+* The [Snyk Runtime Sensor](manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/snyk-runtime-sensor.md) has been updated to reflect the importance of adopting it to achieve the most effective integration and to access its continuously expanded set of features.&#x20;
+
+### Snyk Broker
+
+The Universal Broker feature is now available in Early access. The Universal Broker separates deployment and container concerns from connection concerns. It allows for a smaller or a single deployment to support numerous connections of varied types.
+
+### **Snyk CLI**
+
+* The [CLI commands and options summary](snyk-cli/cli-commands-and-options-summary.md) was updated.
+* [Authentication](snyk-cli/authenticate-to-use-the-cli.md) has been updated.
+* Configuration has been updated: Environment variables for Snyk CLI, [`snyk config`](snyk-cli/commands/config.md) help, [`snyk config environment`](snyk-cli/commands/config-environment.md) help.
+
+### **Snyk  Integrations**
+
+The Snowflake Data Share section has been updated to include a [Data Share Dictionary](manage-risk/reporting/reporting-and-bi-integrations-snowflake-data-share/data-share-data-dictionary.md), designed to help you navigate and build your dataset.
+
+### **Other updates**
+
+* The updated [Regional hosting and data residency](working-with-snyk/regional-hosting-and-data-residency.md) page was published.
+* [Glossary](getting-started/glossary.md) terms were updated for SCA, SAST, DAST, and IAST as well as Software Composition Analysis.
+* [Early Access](getting-started/snyk-release-process.md#early-access) release status notices were updated.
+
+## August 2024
+
+### **Snyk API**&#x20;
+
+* Links in the API reference docs have been updated.
+* The [API endpoints index and notes](snyk-api/api-endpoints-index-and-notes/) have been updated.
+
+### **Snyk AppRisk**&#x20;
+
+* The **Manage Risk > Analytics** pages have been consolidated to better reflect the two Snyk offerings:
+  * [Issues Analytics](manage-risk/enterprise-analytics/issues-analytics.md) - now in Early Access for Snyk Enterprise customers.
+  * [Application Analytics](manage-risk/enterprise-analytics/application-analytics.md) - available only for Snyk AppRisk Pro customers.
+* The [Manage Assets](manage-assets/) documentation has been updated to reflect the addition of Quick filters. Users are only shown quick filters relevant to their entitlement: AppRisk Essentials or AppRisk Pro.
+
+### **Snyk CLI**
+
+* [`snyk auth`](snyk-cli/commands/auth.md) command help updated to reflect OAuth default.
+* &#x20; [CLI authentication](snyk-cli/authenticate-to-use-the-cli.md) instructions updated for OAuth default and improved flow.
+* [`snyk config environment`](snyk-cli/commands/config-environment.md) command help has been added.
+* CLI [support for pnpm added](supported-languages-package-managers-and-frameworks/javascript/javascript-for-open-source.md#pnpm).
+
+### Snyk IDE
+
+* &#x20;[CLI authentication](snyk-cli/authenticate-to-use-the-cli.md) instructions updated for IDE.
+* IDE authentication instructions updated: [Eclipse](scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/eclipse-plugin/authentication-for-the-eclipse-plugin.md), [Jetbrains](scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/jetbrains-plugins/authentication-for-the-jetbrains-plugins.md), [VS extension](scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/visual-studio-extension/visual-studio-extension-authentication.md), [VS Code extension](scm-ide-and-ci-cd-integrations/snyk-ide-plugins-and-extensions/visual-studio-code-extension/visual-studio-code-extension-authentication.md)
+
+### **Snyk Integrations**
+
+* Git repository cloning has been renamed [Workspaces for SCM integrations](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/workspaces-for-scm-integrations.md) to better reflect its functionality. Additional detail on [enablement](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/workspaces-for-scm-integrations.md#manage-workspaces) has been added.
+* The [relationship](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/github-cloud-app.md#how-to-set-up-the-github-cloud-app) between GitHub organizations and Snyk Organizations when integrating with the GitHub Cloud App has been clarified.
+* The [deployment stages table](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/introduction-to-git-repository-integrations/deployment-recommendations-for-scm-integrations.md#recommended-deployment-order) for implementing SCM integrations has been updated to reflect AppRisk functionality.
+
 ## July 2024
+
+### **Snyk API**
+
+* The API documentation now provides the API Reference and explanatory documentation in the [API section](snyk-api/).
+* The [API End of Life (EOL) process and migration guides](api-end-of-life-eol-process-and-migration-guides/) are now published and updated to support the process, which began in July.
 
 ### Snyk AppRisk
 
 * [Asset inventory filtering](manage-assets/assets-inventory-components.md#asset-tabs) describes the new, simplified view that provides an improved experience of filtering the assets.
 * The [Asset inventory layouts](manage-assets/assets-inventory-layouts.md#inventory-layouts) have been renamed to better reflect their functionality.
 * Four new SCM integrations are now available for Snyk AppRisk:&#x20;
-  * [Atlassian Compass](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md#atlassian-compass)
-  * [Harness](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md#harness)
-  * [OpsLevel](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md#opslevel)
-  * [Datadog Service Catalog](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md#datadog-service-catalog)
+  * [Atlassian Compass](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations/#atlassian-compass)
+  * [Harness](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations/#harness)
+  * [OpsLevel](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations/#opslevel)
+  * [Datadog Service Catalog](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations/#datadog-service-catalog)
 * The Snyk AppRisk documentation section has been reorganized to enhance visibility and simplify the adoption of Snyk AppRisk. Here is where you can find the main features:
   * Inventory - [Manage assets](manage-assets/) section
   * Issues - [Prioritize issues for fixing](manage-risk/prioritize-issues-for-fixing/#prioritization-based-on-risk) section
   * Policies - [Assets policies](manage-risk/policies/assets-policies/) section
   * Integrations - [Snyk SCM integrations](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/#group-level-snyk-apprisk-scm-integrations) and [Integrate with Snyk](integrate-with-snyk/#integrations-for-snyk-apprisk) sections
-  * Snyk AppRisk - [Scan with Snyk](scan-using-snyk/snyk-apprisk/) section
+  * Snyk AppRisk - [Scan with Snyk](scan-with-snyk/snyk-apprisk/) section
   * Analytics - [Manage risk](manage-risk/enterprise-analytics/application-analytics.md) section
 
 ### Snyk Integrations
@@ -36,11 +107,6 @@ The most recent updates include significant changes to the user docs, such as fe
   * [Deployment recommendations](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/#deployment-order-recommendations) for Enterprise customers
   * [User permissions and access scope requirements](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/#user-permissions-and-access-scope-requirements) for each SCM integration
   * Instructions on how to generate [integrated SCM tokens for Snyk Broker](scm-ide-and-ci-cd-integrations/snyk-scm-integrations/#integrated-scm-tokens-for-snyk-broker)
-
-### **Snyk API**
-
-* The API documentation now provides the API Reference and explanatory documentation in the [API section](snyk-api/).
-* The [API End of Life (EOL) process and migration guides](api-end-of-life-eol-process-and-migration-guides/) are now published and updated to support the process, which began in July.
 
 ### **Other updates**
 

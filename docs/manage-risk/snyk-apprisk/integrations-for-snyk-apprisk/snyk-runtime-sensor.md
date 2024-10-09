@@ -3,12 +3,22 @@
 {% hint style="warning" %}
 **Release status**
 
-The Snyk runtime sensor is available in a Closed Beta state and applies only to Snyk AppRisk Pro. &#x20;
+The Snyk Runtime Sensor is available in a Closed Beta state and applies only to Snyk AppRisk Pro.
 {% endhint %}
 
-The Runtime Sensor watches your deployments on a Kubernetes cluster and sends the collected data to Snyk.
+The Snyk Runtime Sensor is a [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) that watches your deployments on a Kubernetes cluster and sends the collected data to Snyk.
 
-The following [risk factors](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk#risk-factors) are reported from the Snyk Runtime Sensor: [Deployed](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-deployed), and [Loaded package](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-loaded-package).
+The following [risk factors](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk#risk-factors) are reported from the Snyk Runtime Sensor: [Deployed](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-deployed), and [Loaded package](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-loaded-package) (only for application packages).
+
+On this page, you can find the following information:
+
+* [Prerequisites for Snyk Runtime Sensor](snyk-runtime-sensor.md#prerequisites-for-snyk-runtime-sensor)
+* [Install Snyk Runtime Sensor](snyk-runtime-sensor.md#install-snyk-runtime-sensor)
+  * [Using a Helm chart](snyk-runtime-sensor.md#using-a-helm-chart)
+  * [Using a Helm chart and the AWS Secrets Manager](snyk-runtime-sensor.md#using-a-helm-chart-and-the-aws-secrets-manager)
+  * [On OpenShift](snyk-runtime-sensor.md#on-openshift)
+  * [Through the AWS Marketplace as an EKS add-on](snyk-runtime-sensor.md#aws-eks-deployment)
+* [Troubleshooting for Snyk Runtime Sensor](snyk-runtime-sensor.md#troubleshooting-for-snyk-runtime-sensor)
 
 ## Prerequisites for Snyk Runtime Sensor
 
@@ -20,9 +30,18 @@ Ensure that your environment meets the following technical prerequisites to prop
 Managed Kubernetes services such as EKS Fargate or GKE Autopilot, are not supported, as the cluster nodes are managed by the cloud provider.
 {% endhint %}
 
+* Linux kernel - version 5.8 or higher.
 * Privileged access - you need either root or the following Linux capabilities: `BPF`, `PERFMON`, `SYS_RESOURCES`, `DAC_READ_SEARCH`, `SYS_PTRACE`, `NET_ADMIN`
 * Cluster nodes must support BTF.
 * Language support - Go, Java v8 or higher, .NET v2.0.9 or higher, Node.js v10 or higher, Python 3.6 or higher.
+* Network policy - if your cluster does not allow all outgoing traffic, set up the policy to enable outgoing traffic on port 443 for the following hosts:
+  * `api.snyk.io` or `api.<<REGION>>.snyk.io` if hosted in a different region.
+  * `api.sentry.io`
+  * `kubernetes.default.svc.cluster.local`
+
+{% hint style="warning" %}
+If you encounter network restrictions, ensure that port 443 is enabled and that the policy is stateful.
+{% endhint %}
 
 You also need a token for a [service account](https://docs.snyk.io/snyk-admin/service-accounts). The service account must have one of the following roles:
 
@@ -31,12 +50,14 @@ You also need a token for a [service account](https://docs.snyk.io/snyk-admin/se
 
 ## Install Snyk Runtime Sensor
 
-The Snyk Runtime Sensor is a Kubernetes DeamonSet that can be easily deployed using various methods:
-
-* [Install the Snyk Runtime Sensor using a Helm chart ](snyk-runtime-sensor.md#using-a-helm-chart)
-* [Install the Snyk Runtime Sensor using a Helm chart and the AWS Secrets Manager ](snyk-runtime-sensor.md#using-a-helm-chart-and-the-aws-secrets-manager)
-* [Install the Snyk Runtime Sensor on OpenShift ](snyk-runtime-sensor.md#on-openshift)
-* [Install the Snyk Runtime Sensor through the AWS Marketplace as an EKS add-on](snyk-runtime-sensor.md#through-the-aws-marketplace-as-an-eks-add-on)
+* The Snyk Runtime Sensor DaemonSet must meet the following minimum requirements:
+  * `CPU: 100m`
+  * `Memory: 512Mi`
+* Choose one of the following methods to deploy the Snyk Runtime Sensor:&#x20;
+  * [Install the Snyk Runtime Sensor using a Helm chart ](snyk-runtime-sensor.md#using-a-helm-chart)
+  * [Install the Snyk Runtime Sensor using a Helm chart and the AWS Secrets Manager ](snyk-runtime-sensor.md#using-a-helm-chart-and-the-aws-secrets-manager)
+  * [Install the Snyk Runtime Sensor on OpenShift ](snyk-runtime-sensor.md#on-openshift)
+  * [Install the Snyk Runtime Sensor through the AWS Marketplace as an EKS add-on](snyk-runtime-sensor.md#through-the-aws-marketplace-as-an-eks-add-on)
 
 ### Using a Helm chart
 

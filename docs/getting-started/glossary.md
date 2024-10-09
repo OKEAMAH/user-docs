@@ -26,7 +26,7 @@ The parent image used to construct a container image, usually defined in the `FR
 
 ### Broker
 
-See [Snyk Broker](../enterprise-configuration/snyk-broker/).
+See [Snyk Broker](../enterprise-setup/snyk-broker/).
 
 ### Build System
 
@@ -103,7 +103,7 @@ Common Weakness Enumeration. An online glossary that categorizes software and ha
 
 ### DAST
 
-Dynamic Application Security Testing. An application that you can point at a site or service; it then typically profiles the site or service, then examines the output and behavior to uncover security vulnerabilities. See also [SAST](glossary.md#sast).
+Dynamic Application Security Testing. A security analysis technique that tests a running application from the outside to find security issues. See also[ IAST](glossary.md#iast) and [SAST](glossary.md#sast).
 
 ### Dependency
 
@@ -154,7 +154,7 @@ A measure of whether a vulnerability can be fixed by Sny by applying a patch, up
 
 ### Fix PR
 
-A pull request with an automatic fix for discovered vulnerabilities that Snyk can offer the user. See [Automated fix PRs](../scan-with-snyk/pull-requests/snyk-fix-pull-or-merge-requests/create-automatic-fix-prs-for-backlog-issues-and-known-vulnerabilities.md).
+A pull request with an automatic fix for discovered vulnerabilities that Snyk can offer the user. See [Automated fix PRs](../scan-with-snyk/pull-requests/snyk-pull-or-merge-requests/create-automatic-prs-for-backlog-issues-and-known-vulnerabilities-backlog-prs.md).
 
 ## G
 
@@ -170,7 +170,7 @@ Infrastructure as Code. See [Snyk Infrastructure as Code.](glossary.md#snyk-infr
 
 ### IAST
 
-Interactive Application Security Testing. This approach tests for vulnerabilities while running the application. See [DAST](glossary.md#dast) and [SAST](glossary.md#sast).
+Interactive Application Security Testing. A runtime analysis tool that focuses on code behavior during execution to determine behaviors of interest to you, for example, what packages are loaded, where data flows in the running application, or how end users interact with the application. Capabilities vary between vendors and products. IAST works with a running application to analyze it internally by using sensors or agents placed within the application's runtime environment. IAST offers more detailed insights than [DAST](glossary.md#dast), for example, by tracing the source of vulnerabilities in the code. See also [SAST](glossary.md#sast).
 
 ### IDE
 
@@ -258,7 +258,7 @@ A software package hosting service that allows customers to host packages and co
 
 ### Pinnable
 
-A fix type: define and "pin" a specific version of an indirect dependency, to avoid a direct dependency pulling in a vulnerable version.
+A fix type. Define and "pin" a specific version of an indirect dependency, to avoid a direct dependency pulling in a vulnerable version.
 
 ### Policy
 
@@ -278,7 +278,7 @@ Use Snyk PR Checks to prevent new security issues from entering your codebase by
 
 ### Priority Score
 
-Snyk scores issues, including vulnerabilities and licenses for Open Source, to help prioritize the treatment of each one. Scores are based on multiple factors including the CVSS score and range from 0 (low) to 1000 (high). See [Priority Score](../manage-risk/prioritize-issues-for-fixing/priority-score.md).
+Snyk scores issues, including vulnerabilities and licenses for Open Source, to help prioritize the treatment of each one. Scores are based on multiple factors, including the CVSS score, and range from 0 (low) to 1000 (high). See [Priority Score](../manage-risk/prioritize-issues-for-fixing/priority-score.md).
 
 ### Project
 
@@ -288,7 +288,7 @@ An external item scanned by Snyk with configuration to define how to run that sc
 
 ### Reachability
 
-Whether an application contains code that will hit a vulnerable code path during execution. See [Reachable vulnerabilities](../manage-risk/prioritize-issues-for-fixing/reachable-vulnerabilities.md).
+Whether an application contains code that will hit a vulnerable code path during execution. See [Reachable vulnerabilities](../manage-risk/prioritize-issues-for-fixing/reachability-analysis.md).
 
 ### Registry
 
@@ -330,7 +330,7 @@ Static Analysis Results Interchange Format. A standard, JSON-based format for th
 
 ### SAST
 
-Static Application Security Testing. A method to secure software by reviewing the source code of your proprietary software and identifying sources of vulnerabilities. See also [DAST](glossary.md#dast).
+Static Application Security Testing. A security analysis technique that examines static source code to identify potential vulnerabilities without running the application. See also [IAST](glossary.md#iast), [DAST](glossary.md#dast), [Snyk Code](glossary.md#snyk-code), and [Snyk Infrastructure as Code](glossary.md#snyk-infrastructure-as-code).
 
 ### SBOM
 
@@ -338,7 +338,7 @@ Software Bill Of Materials. A list of components in a piece of software.
 
 ### SCA
 
-Software Composition Analysis. A technology that is used to identify open-source and third-party components in use in an application, including their known security vulnerabilities, and typically adversarial license restrictions. See also [Static Code Analysis](glossary.md#static-code-analysis).
+Software Composition Analysis. A security analysis technique that is used to identify open-source and third-party components in use in an application, their known security vulnerabilities, and typically also adversarial license restrictions. Not to be confused with [Static Code Analysis](glossary.md#static-code-analysis). See also [Snyk Open Source](glossary.md#snyk-open-source).
 
 ### Scanned artifacts (Snyk AppRisk)
 
@@ -386,11 +386,11 @@ A Snyk tool that enables developers to integrate programmatically with Snyk. See
 
 ### Snyk Apps
 
-Snyk Apps are the modern and preferred way to build integrations with Snyk, exposing fine-grained scopes for accessing resources over the Snyk APIs, powered by OAuth 2.0 for a developer-friendly experience. See [Snyk Apps](../snyk-api-info/snyk-apps/).
+Snyk Apps are the modern and preferred way to build integrations with Snyk, exposing fine-grained scopes for accessing resources over the Snyk APIs, powered by OAuth 2.0 for a developer-friendly experience. See [Snyk Apps](../snyk-api/how-to-use-snyk-apps-apis/).
 
 ### Snyk Broker
 
-A client/server system that serves as an agent or proxy, allowing Snyk to scan private customer environments: Jira, code repositories, or container registries. Snyk Broker relays messages and allows users to filter which messages are allowed through, for example, allowing users to expose only some GitHub APIs to Snyk. See [Snyk Broker](../enterprise-configuration/snyk-broker/).
+A client/server system that serves as an agent or proxy, allowing Snyk to scan private customer environments: Jira, code repositories, or container registries. Snyk Broker relays messages and allows users to filter which messages are allowed through, for example, allowing users to expose only some GitHub APIs to Snyk. See [Snyk Broker](../enterprise-setup/snyk-broker/).
 
 ### Snyk CLI
 
@@ -406,7 +406,7 @@ A Snyk product. Enables developers to find and fix vulnerabilities in container 
 
 ### Snyk Infrastructure as Code
 
-A Snyk product. Enables developers to find and fix vulnerabilities in Kubernetes, Helm, and Terraform configuration files. See [Snyk Infrastructure as Code](../scan-with-snyk/snyk-iac/scan-your-iac-source-code/).
+A Snyk product. Enables developers to find and fix vulnerabilities in Kubernetes, Helm, and Terraform configuration files. See [Snyk IaC](../scan-with-snyk/snyk-iac/).
 
 ### Snyk Open Source
 
@@ -439,7 +439,7 @@ Software Package Data Exchange. A file format used to document information on th
 
 ### Static Code Analysis
 
-A method of debugging by examining source code before a program is run. See also [SCA, Software Composition Analysis](glossary.md#sca).
+A technique for examining source code to identify issues related to code quality, structure, or performance, such as determining code reachability or spotting potential inefficiencies. While this technique may touch on security concerns, its primary focus is often broader, covering various aspects of code health. In contrast, Static Application Security Testing ([SAST](glossary.md#sast)) specifically targets the identification of security vulnerabilities within the code, such as coding flaws that could lead to security risks.
 
 ## T
 
@@ -467,7 +467,7 @@ A security vulnerability that was identified by Snyk. See [Manage vulnerabilitie
 
 ### Webhook
 
-A way for an app to provide other applications with real-time information. Snyk uses webhooks to check changes in code. See [Snyk Webhooks](../snyk-api-info/snyk-webhooks/).
+A way for an app to provide other applications with real-time information. Snyk uses webhooks to check changes in code. See [Snyk Webhooks](../snyk-api/how-to-use-snyk-webhooks-apis/).
 
 ### Web UI
 

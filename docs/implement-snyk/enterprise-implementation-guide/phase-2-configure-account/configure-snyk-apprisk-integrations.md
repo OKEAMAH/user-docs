@@ -75,7 +75,7 @@ If you answered Yes to any of the above questions, then you need to deploy a new
 Snyk recommends creating a new Organization in Snyk specifically for the Snyk AppRisk Broker.
 {% endhint %}
 
-Navigate to the [Snyk Broker - AppRisk](../../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page for more details about installing and configuring Snyk AppRisk using Snyk Broker.\
+Navigate to the [Snyk Broker - AppRisk](../../../enterprise-setup/snyk-broker/snyk-broker-apprisk.md) page for more details about installing and configuring Snyk AppRisk using Snyk Broker.\
 
 
 ### Third-party integrations
@@ -103,7 +103,7 @@ The supported third-party integrations are:
 
 Backstage is a service catalog that allows users to add metadata or annotations to their repositories, helping to organize and categorize the available resources for easier navigation and understanding. You can leverage your SCM integration to pull metadata associated with Backstage catalog files into Snyk AppRisk.
 
-Access the [Application context for SCM Integrations](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations.md) docs for more details about how to use this feature.
+Access the [Application context for SCM Integrations](../../../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/application-context-for-scm-integrations/) docs for more details about how to use this feature.
 
 {% hint style="info" %}
 After setting up all the Snyk AppRisk integrations, depending on the number of repositories, results may take up to a day to appear.

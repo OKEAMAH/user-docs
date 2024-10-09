@@ -77,7 +77,7 @@ The example that follows shows a Project-level security report.
 
 #### Project monitoring and automatic fix Pull Requests
 
-Snyk scans your Projects on either a daily or a weekly basis. When new vulnerabilities are found, Snyk notifies you by email and by opening [automated pull requests](../../scan-with-snyk/pull-requests/snyk-fix-pull-or-merge-requests/create-automatic-prs-for-new-fixes.md) with fixes for your repositories.
+Snyk scans your Projects on either a daily or a weekly basis. When new vulnerabilities are found, Snyk notifies you by email and by opening [automated pull requests](../../scan-with-snyk/pull-requests/snyk-pull-or-merge-requests/create-automatic-prs-for-new-fixes-fix-prs.md) with fixes for your repositories.
 
 The example that follows shows a fix Pull Request opened by Snyk.
 
@@ -93,7 +93,7 @@ To review and adjust the automatic fix pull request settings:
 {% hint style="info" %}
 Unlike manual pull requests opened from the Bitbucket interface, Snyk pull requests are _not_ automatically assigned to the default reviewer set in your Bitbucket Cloud account.
 
-For more information, see [Snyk automated pull requests](../../scan-with-snyk/pull-requests/snyk-fix-pull-or-merge-requests/create-automatic-prs-for-new-fixes.md).
+For more information, see [Snyk automated pull requests](../../scan-with-snyk/pull-requests/snyk-pull-or-merge-requests/create-automatic-prs-for-new-fixes-fix-prs.md).
 {% endhint %}
 
 #### Pull request tests
@@ -216,7 +216,7 @@ After manually setting up the languages in your Bitbucket project, Snyk can auto
 2. Access Token (`mandatory`): Create your BitBucket PAT from your BitBucket organization.
 
 {% hint style="info" %}
-If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page.
+If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-setup/snyk-broker/snyk-broker-apprisk.md) page.
 {% endhint %}
 
 3. API URL (`mandatory`) - Input the API URL.
@@ -238,7 +238,7 @@ Create a BitBucket app password by following these steps:
 {% endhint %}
 
 6. Service type (`mandatory`): Select the service type, Cloud, or On-premises.
-7. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
+7. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations/) page.
 
 #### API version <a href="#bitbucket-api-version" id="bitbucket-api-version"></a>
 

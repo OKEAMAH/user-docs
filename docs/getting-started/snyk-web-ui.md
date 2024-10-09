@@ -166,7 +166,7 @@ Snyk tracks and flags Pull Requests (PRs) in the top-most vulnerable Projects, i
 * PRs that can be raised to fix vulnerabilities in some of the most vulnerable Projects.
 * PRs that have already been raised by or through Snyk and are open and awaiting review.
 
-For Projects with the **Fix vulnerabilities** link, use this link to view Project details with an option to open a fix PR. See [Snyk Fix Pull or Merge Requests](../scan-with-snyk/pull-requests/snyk-fix-pull-or-merge-requests/) for more details.
+For Projects with the **Fix vulnerabilities** link, use this link to view Project details with an option to open a fix PR. See [Snyk Fix Pull or Merge Requests](../scan-with-snyk/pull-requests/snyk-pull-or-merge-requests/) for more details.
 
 {% hint style="warning" %}
 Currently, Snyk tracks and flags PRs in GitHub, GitHub Enterprise, and Bitbucket Cloud only, and only for the top-most vulnerable Projects. If you use another SCM, the **Pending tasks** section shows PRs that can be raised but not PRs that have already been raised.
@@ -233,13 +233,13 @@ The Reports page is available at both the Group and Organization levels.
 
 ### View dependencies and licenses
 
-You can [view dependencies](https://docs.snyk.io/manage-risk/reporting/dependencies-and-licenses/view-dependencies) and [license information](https://docs.snyk.io/manage-risk/reporting/dependencies-and-licenses/view-licenses) for all Projects in your Organization or Group, using the **Dependencies** option in your Organization or Group menu:
+You can [view dependencies](https://docs.snyk.io/manage-risk/reporting/dependencies-and-licenses/view-dependencies) and [license information](https://docs.snyk.io/manage-risk/reporting/dependencies-and-licenses/view-licenses) for all Projects in your Organization or Group, using the **Dependencies** option in your Organization or Group menu.
 
 ### Manage Organization or Group members
 
 Select **Members** from the navigation on the Dashboard to view and manage users, roles, and how users authenticate in your Snyk [Organization](../snyk-admin/groups-and-organizations/organizations/manage-users-in-organizations.md) or [Group](../snyk-admin/groups-and-organizations/groups/manage-users-in-a-group.md).&#x20;
 
-The Members page is available at both Group and Organization level.
+The Members page is available at both the Group and Organization levels.
 
 {% hint style="warning" %}
 You must be assigned the [required Admin roles and permissions](../snyk-admin/user-roles/pre-defined-roles.md) to make changes to the **Members** tab.
@@ -263,7 +263,7 @@ Select the **Help** > **Product updates** menu option to visit [snyk.io updates]
 
 Select your **name** in the navigation on the Dashboard and then **Account settings** to open your [account settings](https://app.snyk.io/account) page, where you can view and configure your user account settings, including:
 
-* View and manage your API token or the Auth Token for free accounts. See [How to obtain and authenticate with your Snyk API token](how-to-obtain-and-authenticate-with-your-snyk-api-token.md) for more detalis.
+* View and manage your API token or the Auth Token for free accounts. See [How to obtain and authenticate with your Snyk API token](how-to-obtain-and-use-your-snyk-api-token.md) for more detalis.
 * View the list of your **Authorized Applications**.
 * Set your preferred Organization. See [Manage Organizations: Set your preferred Organization](../snyk-admin/groups-and-organizations/organizations/create-and-delete-organizations.md#set-your-preferred-organization).
 * **Delete** your account.

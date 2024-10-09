@@ -6,7 +6,7 @@ You can scan your open-source libraries using Snyk Open Source:&#x20;
 * With your [IDE](https://docs.snyk.io/integrations/ide-tools)
 * With a [CI/CD integration](../../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/)
 * Through the [Snyk CLI](../../../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-open-source/)
-* Through [Snyk API](../../../snyk-api/)
+* Through the [Snyk API](../../../snyk-api/reference/test-v1.md)
 
 ## Prerequisites for using Snyk Open Source in the Web UI
 
@@ -28,7 +28,7 @@ For more details, see [View Project information](../../../snyk-admin/snyk-projec
 
 ## Fix vulnerabilities in your open-source libraries
 
-For some languages, Snyk can fix vulnerabilities using fix pull/merge requests. For more information, see [Automatic and manual PRs with Snyk Open Source](../../pull-requests/snyk-fix-pull-or-merge-requests/).
+For some languages, Snyk can fix vulnerabilities using fix pull/merge requests. For more information, see [Automatic and manual PRs with Snyk Open Source](../../pull-requests/snyk-pull-or-merge-requests/).
 
 Navigate to the **Issues** card for a Project:
 

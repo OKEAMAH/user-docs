@@ -13,7 +13,7 @@ If you want to set up integrations for Snyk AppRisk, use the Integrations menu a
 
 {% hint style="warning" %}
 &#x20;**Feature availability**\
-The GitLab integration is available for [Snyk Enterprise plan](https://snyk.io/plans/) customers. [Snyk Broker](../../enterprise-configuration/snyk-broker/) is required if you integrate from a private network.
+The GitLab integration is available for [Snyk Enterprise plan](https://snyk.io/plans/) customers. [Snyk Broker](../../enterprise-setup/snyk-broker/) is required if you integrate from a private network.
 {% endhint %}
 
 ### Prerequisites for GitLab integration
@@ -150,13 +150,13 @@ The Integrations page shows all active integrations, including data from your ex
 2. API Token (`mandatory`): Create your GitLab PAT from your GitLab organization. Follow the instructions in [Generate a Personal access token from your GitLab settings section](gitlab.md#generate-a-personal-access-token-from-your-gitlab-settings). Authorize your personal access token if you have configured SAML SSO.
 
 {% hint style="info" %}
-If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page.
+If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-setup/snyk-broker/snyk-broker-apprisk.md) page.
 {% endhint %}
 
 3. Host URL (`mandatory`): The IP/URL of the GitLab server. The default URL is [`https://gitlab.com`](https://gitlab.com)
 4. Verify SSL (`optional`): Enable the option if you want to verify the SSL.
 5. Pull personal repositories (`optional`): Enable the option If you only want to pull the repositories you own.
-6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
+6. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations/) page.
 
 #### Generate a Personal access token from your GitLab settings
 

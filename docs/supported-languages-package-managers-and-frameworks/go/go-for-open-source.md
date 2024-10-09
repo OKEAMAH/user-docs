@@ -1,9 +1,9 @@
 # Go for open source
 
 {% hint style="warning" %}
-Beginning on January 1 2023 Snyk no longer supports govendor Projects. As a general security best practice, Snyk recommends using tools that are consistently maintained and up-to-date.
+Since January 1, 2023, Snyk has not supported govendor Projects. As a general security best practice, Snyk recommends using tools that are consistently maintained and up-to-date.
 
-Now that Snyk no longer supports scanning of govendor Projects, a warning is issued and no results are provided.
+Since Snyk no longer supports scanning of govendor Projects, a warning is issued and no results are provided.
 {% endhint %}
 
 ## Go for open source support
@@ -24,6 +24,14 @@ Now that Snyk no longer supports scanning of govendor Projects, a warning is iss
 
 * License scanning
 * Reports
+
+{% hint style="info" %}
+Only official releases are tracked. Commits, including into the default branch, are not identified unless included in an official release or tag.&#x20;
+
+In the case of projects that have a package manager, this means a release to the package manager.&#x20;
+
+In the case of Go and Unmanaged scans (C/C++) this requires an official release or tag on the GitHub repo.
+{% endhint %}
 
 ## Go Modules and dep support
 
@@ -105,7 +113,7 @@ Private module support in different SCMs varies depending on whether [full sourc
 Snyk Broker is supported only  when [full source code analysis](go-for-open-source.md#enable-full-source-code-analysis) is disabled
 {% endhint %}
 
-Go Modules Projects imported using new [Snyk Broker](../../enterprise-configuration/snyk-broker/) clients should work as expected.
+Go Modules Projects imported using new [Snyk Broker](../../enterprise-setup/snyk-broker/) clients should work as expected.
 
 To add support to clients created before December 30, 2020, add `go.mod` and `go.sum` to your `accept.json` file, as per the changes in this [pull request](https://github.com/snyk/broker/pull/299/files).
 

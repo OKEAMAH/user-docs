@@ -1,6 +1,6 @@
 # Guidance for Java and Kotlin
 
-Use this guide to apply Snyk effectively in your technology stack.
+This guide is provided to help you apply Snyk effectively in your technology stack.
 
 ## Package Registry Integrations (Artifactory/Nexus) - Maven
 
@@ -8,7 +8,7 @@ Artifactory and Nexus Package Registry integrations are available to Snyk Enterp
 
 * Snyk Open Source uses Artifactory or Nexus to resolve transitive dependencies through private packages.
 * Snyk can be connected to a publicly available instance using username and password or a private server on your network using the Snyk Broker.
-* Snyk Open Source provides integrations with Artifactory and Nexus, both as local gatekeepers and interacting with the registry for security testing. See [Nexus Repository Manager setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/nexus-repository-manager-connection-setup/) and [Artifactory Registry setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/artifactory-package-repository-connection-setup/)
+* Snyk Open Source provides integrations with Artifactory and Nexus, both as local gatekeepers and interacting with the registry for security testing. See [Nexus Repository Manager setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/nexus-repository-manager-connection-setup/) and [Artifactory Registry setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/artifactory-package-repository-connection-setup/)
 
 {% hint style="info" %}
 If you are not a Snyk Enterprise user using Artifactory or Nexus, analysis is best performed via CLI, as the build system will retrieve the dependencies and be present locally.
@@ -16,11 +16,11 @@ If you are not a Snyk Enterprise user using Artifactory or Nexus, analysis is be
 
 For more information on package registry integrations, including Maven, see the following:
 
-* Package registry integrations: [Nexus Repository Manager setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/nexus-repository-manager-connection-setup/) and [Artifactory Registry setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/artifactory-package-repository-connection-setup/)
-* [Artifactory Registry for Maven](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/artifactory-package-repository-connection-setup/artifactory-registry-for-maven.md)
-* [Nexus Registry for Maven](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/nexus-repository-manager-connection-setup/nexus-repository-manager-for-maven.md)
-* Nexus Container Registry: [Container security with Nexus integration](../../scan-using-snyk/snyk-container/container-registry-integrations/integrate-with-nexus-container-registry.md)
-* Gatekeeper plugins: [Artifactory Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) and [Nexus Repository Manager Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md)
+* Package registry integrations: [Nexus Repository Manager setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/nexus-repository-manager-connection-setup/) and [Artifactory Registry setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/artifactory-package-repository-connection-setup/)
+* [Artifactory Registry for Maven](../../scan-with-snyk/snyk-open-source/package-repository-integrations/artifactory-package-repository-connection-setup/artifactory-registry-for-maven.md)
+* [Nexus Registry for Maven](../../scan-with-snyk/snyk-open-source/package-repository-integrations/nexus-repository-manager-connection-setup/nexus-repository-manager-for-maven.md)
+* Nexus Container Registry: [Container security with Nexus integration](../../scan-with-snyk/snyk-container/container-registry-integrations/integrate-with-nexus-container-registry.md)
+* Gatekeeper plugins: [Artifactory Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) and [Nexus Repository Manager Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md)
 
 ## Language and package manager considerations
 
@@ -49,7 +49,7 @@ Developer dependencies (`scope=test`) are ignored as they are not pushed to prod
 * Snyk will interact with the package manager to produce a list of dependencies.
 * Typically Gradle will execute code and other actions during the build process that will impact the installed dependencies, so the CLI workflow is recommended if a gradle.lockfile is not present.
 
-### [**Kotlin**](#user-content-fn-1)[^1]
+### Kotlin
 
 The following manifest files are supported:
 
@@ -58,14 +58,11 @@ The following manifest files are supported:
 
 See the [Java and Kotlin](./#open-source-and-licensing) page for more details about the supported features.
 
-### **Other**
+### **APIs**
 
-Sometimes customers develop advanced dependency management strategies and may not necessarily use the standard/well-traveled package managers. For that reason, Snyk has provided test APIs
+Sometimes customers develop advanced dependency management strategies and may not necessarily use the standard and frequently used package managers. For that reason, Snyk has provided test APIs.
 
-* One-time testing API
-  * Test - will generate a dependency tree. See [Test](https://snyk.docs.apiary.io/#reference/test) docs.
-    * [Maven testing endpoint](https://snyk.docs.apiary.io/#reference/test/maven/test-for-issues-in-a-public-package-by-group-id,-artifact-id-and-version)
-  * [PURL for maven](https://apidocs.snyk.io/?version=2022-11-14#get-/orgs/-org\_id-/packages/-purl-/issues)
+For on-time testing using the Snyk API, you can use the [Test](../../snyk-api/reference/test-v1.md) endpoints. Examples include [Test for issues in a (Maven) public package by group id, artifact id and version](../../snyk-api/reference/test-v1.md#test-maven-groupid-artifactid-version) and [List issues for a package](../../snyk-api/reference/issues.md#orgs-org\_id-packages-purl-issues).
 
 ## Snyk Integrations and common usage patterns
 
@@ -77,11 +74,11 @@ Typically you can instrument testing as part of a build system or adopt a lockfi
 
 * It is quite common for large organizations to monitor applications via Git integration, to begin with, daily monitoring, turning on PR checks for only key applications at the start.
 * As developers become familiar with Snyk capabilities, they widen the scope of applications with PR checks for gating.
-* Use CI/CD to passively monitor and then turn on gating by using the [snyk \[product\] test and monitor commandsd](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md).
+* Use CI/CD to passively monitor and then turn on gating by using the [snyk \[product\] test and monitor commands](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md).
 
 ### Gradle Projects without a lock file
 
-* Use CI/CD to passively monitor and then turn on gating by using the [snyk \[product\] test and monitor commandsd](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md).
+* Use CI/CD to passively monitor and then turn on gating by using the [`snyk [product] test` and `monitor` commands](../../scm-ide-and-ci-cd-integrations/snyk-ci-cd-integrations/snyk-ci-cd-integration-deployment-and-strategies/snyk-test-and-snyk-monitor-in-ci-cd-integration.md).
 * Gating and failing the build typically will be turned on one Project to start so that everyone can become familiar with the process and use passive monitoring for the remainder of the portfolio.
 
 ## Snyk CLI Tips and Tricks
@@ -141,5 +138,3 @@ The following is a collection of articles from the Snyk Security team and Develo
 * [Log4j vulnerability explained: Prevent Log4Shell RCE by updating to version 2.17.1](https://snyk.io/blog/log4j-rce-log4shell-vulnerability-cve-2021-44228/)
 * [Best practices for managing Java dependencies](https://snyk.io/blog/best-practices-for-managing-java-dependencies/)
 * [Exploring the Spring security authorization bypass (CVE-2022-31692)](https://snyk.io/blog/spring-security-authorization-bypass-cve-2022-31692/)\\
-
-[^1]: this makes it look like Kotlin is a separate tool like Maven or Gradle. I'd remove the heading, the supported build files are part of Gradle

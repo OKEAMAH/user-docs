@@ -81,7 +81,7 @@ The Snyk delivery method is designed to ensure rapid value realization with Snyk
 
 #### Repository import
 
-The Snyk Consultant will work with the Customer to import their repositories into Snyk (up to 50 targets) either through the UI import functionality or through the [API Import tool](../../scan-using-snyk/snyk-tools/tool-snyk-api-import/).
+The Snyk Consultant will work with the Customer to import their repositories into Snyk (up to 50 targets) either through the UI import functionality or through the [API Import tool](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/).
 
 #### SCM integration settings
 
@@ -89,7 +89,7 @@ The Snyk Consultant will work with the Customer to configure SCM integration set
 
 #### SCM Broker installation
 
-The Snyk Consultant will work with the Customer to install the Snyk Broker in a pre-determined environment that follows the [Snyk Broker system requirements](../../enterprise-configuration/snyk-broker/prepare-snyk-broker-for-deployment.md).
+The Snyk Consultant will work with the Customer to install the Snyk Broker in a pre-determined environment that follows the [Snyk Broker system requirements](../../enterprise-setup/snyk-broker/prepare-snyk-broker-for-deployment.md).
 
 #### Snyk API Import and SCM snyc
 
@@ -123,7 +123,7 @@ The Snyk delivery method is tailored to ensure rapid value realization with Snyk
 
 #### Repository import
 
-The Snyk Consultant will work with the Customer to import their repositories into Snyk (up to 50 targets) either through the UI import functionality or through the [API Import tool](../../scan-using-snyk/snyk-tools/tool-snyk-api-import/).&#x20;
+The Snyk Consultant will work with the Customer to import their repositories into Snyk (up to 50 targets) either through the UI import functionality or through the [API Import tool](../../scan-with-snyk/snyk-tools/tool-snyk-api-import/).&#x20;
 
 #### SCM integration settings
 
@@ -131,7 +131,7 @@ The Snyk Consultant will work with the Customer to configure SCM integration set
 
 #### SCM Broker installation
 
-The Snyk Consultant will work with the Customer to install the Snyk Broker in a pre-determined environment that follows the [Snyk Broker system requirements](../../enterprise-configuration/snyk-broker/prepare-snyk-broker-for-deployment.md).
+The Snyk Consultant will work with the Customer to install the Snyk Broker in a pre-determined environment that follows the [Snyk Broker system requirements](../../enterprise-setup/snyk-broker/prepare-snyk-broker-for-deployment.md).
 
 #### Snyk API Import and SCM Sync
 
@@ -201,7 +201,7 @@ The Snyk Consultant will work with the Customer to configure SCM Integration set
 
 #### SCM Broker installation
 
-The Snyk Consultant will work with the Customer to install the Snyk Broker in a predetermined environment that follows the [Snyk Broker system requirements](../../enterprise-configuration/snyk-broker/prepare-snyk-broker-for-deployment.md).
+The Snyk Consultant will work with the Customer to install the Snyk Broker in a predetermined environment that follows the [Snyk Broker system requirements](../../enterprise-setup/snyk-broker/prepare-snyk-broker-for-deployment.md).
 
 #### Single pipeline CI/CD CLI configuration
 

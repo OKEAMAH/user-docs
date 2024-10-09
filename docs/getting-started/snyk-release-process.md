@@ -16,11 +16,13 @@ Not all features follow all these stages, and timelines for each feature to move
 
 **Snyk features in Closed Beta**
 
-* [Customize PR templates](../scan-with-snyk/pull-requests/snyk-fix-pull-or-merge-requests/customize-pr-templates/)
 * [Configure PR Checks](../scan-with-snyk/pull-requests/pull-request-checks/configure-pull-request-checks.md)
 * [Publish Snyk Code CLI results](../snyk-cli/scan-and-maintain-projects-using-the-cli/snyk-cli-for-snyk-code/publish-snyk-code-cli-results-and-ignore-issues.md)
-* [Enterprise Analytics](../manage-risk/enterprise-analytics/)
-* [Snyk Code - Clone capability with Broker for Docker](../enterprise-configuration/snyk-broker/install-and-configure-snyk-broker/advanced-configuration-for-snyk-broker-docker-installation/snyk-code-clone-capability-with-broker-for-docker.md)
+* Third-party integrations for Snyk AppRisk:
+  * [Nightfall](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#nightfall-setup-guide)
+  * [Dynatrace](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#dynatrace-setup-guide)
+  * [Sysdig](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#sysdig-setup-guide)
+  * [Orca Security](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#orca-security-setup-guide)
 
 ## Early Access
 
@@ -29,14 +31,29 @@ Not all features follow all these stages, and timelines for each feature to move
 **Snyk features in Early Access**
 
 * [Snyk GitHub Cloud App](../scm-ide-and-ci-cd-integrations/snyk-scm-integrations/github-cloud-app.md)
-* [Automatically created Project collections](../snyk-admin/introduction-to-snyk-projects/automatically-created-project-collections.md)
-* [Custom rules](../scan-with-snyk/snyk-code/snyk-code-custom-rules/)
-* [Risk Score](../manage-risk/prioritize-issues-for-fixing/risk-score.md)
-* [Reachable vulnerabilities](../manage-risk/prioritize-issues-for-fixing/reachable-vulnerabilities.md)
-* [Group projects by branch or version for monitoring](../snyk-cli/scan-and-maintain-projects-using-the-cli/group-projects-by-branch-or-version-for-monitoring.md)
-* [Fix code vulnerabilities automatically](../scan-with-snyk/snyk-code/manage-code-vulnerabilities/fix-code-vulnerabilities-automatically.md)
-* [Snyk broker commit signing](../enterprise-configuration/snyk-broker/snyk-broker-commit-signing.md)
-* [Improved .NET scanning](../supported-languages-package-managers-and-frameworks/.net/improved-.net-scanning.md)
+*   Projects
+
+    [Automatically created Project collections](../snyk-admin/introduction-to-snyk-projects/automatically-created-project-collections.md)
+* Snyk Code
+  * [Snyk Code custom rules](../scan-with-snyk/snyk-code/snyk-code-custom-rules/)
+  * [Fix code vulnerabilities automatically](../scan-with-snyk/snyk-code/manage-code-vulnerabilities/fix-code-vulnerabilities-automatically.md)
+* Risk Management
+  * [Risk Score](../manage-risk/prioritize-issues-for-fixing/risk-score.md)
+  * Reachability[ analysis](../manage-risk/prioritize-issues-for-fixing/reachability-analysis.md)
+* Snyk Broker
+  * [Snyk Broker commit signing](../enterprise-setup/snyk-broker/snyk-broker-commit-signing.md)
+  * [Snyk Code - Clone capability with Broker for Docker](../enterprise-setup/snyk-broker/install-and-configure-snyk-broker/advanced-configuration-for-snyk-broker-docker-installation/snyk-code-clone-capability-with-broker-for-docker.md)
+  * [Universal Broker](../enterprise-setup/snyk-broker/universal-broker/)
+* Language support
+  * [Improved .NET scanning](../supported-languages-package-managers-and-frameworks/.net/improved-.net-scanning.md)
+  * [Snyk CLI pnpm support](../supported-languages-package-managers-and-frameworks/javascript/javascript-for-open-source.md#pnpm)
+  * [Improved Gradle SCM scanning](../supported-languages-package-managers-and-frameworks/java-and-kotlin/git-repositories-with-maven-and-gradle.md#improved-gradle-scm-scanning-early-access)
+* Third-party integrations for Snyk AppRisk:&#x20;
+  * [Veracode](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#veracode-setup-guide)
+  * [Checkmarx](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#checkmarx-setup-guide)
+  * [SonarQube](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#sonarqube-setup-guide)
+  * [GitGuardian](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#gitguardian-setup-guide)
+  * [Jira](../manage-risk/snyk-apprisk/integrations-for-snyk-apprisk/connect-a-third-party-integration.md#jira-setup-guide)
 
 ## General Availability
 

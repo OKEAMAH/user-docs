@@ -1,3 +1,218 @@
+## 2024-08-25 - Updated 2024-09-11
+
+### POST - `/orgs/{org_id}/apps` - Updated
+- added the new required request property `name`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- added the new required request property `redirect_uris`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- added the new required request property `scopes`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the request property `data`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- added the new optional request property `access_token_ttl_seconds`
+
+- added the new optional request property `context`
+
+
+
+### GET - `/orgs/{org_id}/apps` - Updated
+- the `data/items/attributes/redirect_uris` response property`s minItems was decreased from `1` to `0` for the response status `200`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- the response property `data/items/attributes/client_id` became required for the status `200`
+
+- the response property `data/items/attributes/redirect_uris` became required for the status `200`
+
+
+
+### PATCH - `/orgs/{org_id}/apps/{client_id}` - Updated
+- the `data/attributes/redirect_uris` response property`s minItems was decreased from `1` to `0` for the response status `200`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the request property `data`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- added the new optional request property `access_token_ttl_seconds`
+
+- added the new optional request property `name`
+
+- added the new optional request property `redirect_uris`
+
+- the response property `data/attributes/client_id` became required for the status `200`
+
+- the response property `data/attributes/redirect_uris` became required for the status `200`
+
+
+
+### GET - `/orgs/{org_id}/apps/{client_id}` - Updated
+- the `data/attributes/redirect_uris` response property`s minItems was decreased from `1` to `0` for the response status `200`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- the response property `data/attributes/client_id` became required for the status `200`
+
+- the response property `data/attributes/redirect_uris` became required for the status `200`
+
+
+## 2024-08-25 - Updated 2024-09-03
+
+### POST - `/groups/{group_id}/memberships` - Updated
+- the response property `data/relationships/group` became required for the status `201`
+
+- the response property `data/relationships/group/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/group/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/group/data/id` became required for the status `201`
+
+- the response property `data/relationships/role` became required for the status `201`
+
+- the response property `data/relationships/role/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/role/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/role/data/id` became required for the status `201`
+
+- the response property `data/relationships/user` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/email` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/username` became required for the status `201`
+
+- the response property `data/relationships/user/data/id` became required for the status `201`
+
+
+
+### GET - `/groups/{group_id}/memberships` - Updated
+- the response property `data/items/relationships/group` became required for the status `200`
+
+- the response property `data/items/relationships/group/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/group/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/group/data/id` became required for the status `200`
+
+- the response property `data/items/relationships/role` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/id` became required for the status `200`
+
+- the response property `data/items/relationships/user` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/email` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/username` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/id` became required for the status `200`
+
+
+## 2024-08-25 - Updated 2024-08-30
+
+### POST - `/orgs/{org_id}/memberships` - Updated
+- the response property `data/relationships/org` became required for the status `201`
+
+- the response property `data/relationships/org/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/org/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/org/data/id` became required for the status `201`
+
+- the response property `data/relationships/role` became required for the status `201`
+
+- the response property `data/relationships/role/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/role/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/role/data/id` became required for the status `201`
+
+- the response property `data/relationships/user` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/email` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/name` became required for the status `201`
+
+- the response property `data/relationships/user/data/attributes/username` became required for the status `201`
+
+- the response property `data/relationships/user/data/id` became required for the status `201`
+
+
+
+### GET - `/orgs/{org_id}/memberships` - Updated
+- the response property `data/items/relationships/org` became required for the status `200`
+
+- the response property `data/items/relationships/org/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/org/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/org/data/id` became required for the status `200`
+
+- the response property `data/items/relationships/role` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/role/data/id` became required for the status `200`
+
+- the response property `data/items/relationships/user` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/email` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/name` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/attributes/username` became required for the status `200`
+
+- the response property `data/items/relationships/user/data/id` became required for the status `200`
+
+
+## 2024-08-25
+
+### POST - `/orgs/{org_id}/memberships` - Added
+- Create a org membership for a user with role
+
+
+### GET - `/orgs/{org_id}/memberships` - Added
+- Returns all memberships of the org
+
+
+### PATCH - `/orgs/{org_id}/memberships/{membership_id}` - Added
+- Update a org membership for a user with role
+
+
+### DELETE - `/orgs/{org_id}/memberships/{membership_id}` - Added
+- Remove a user`s membership of the group.
+
+
+
+### GET - `/groups/{group_id}/org_memberships` - Added
+- Get list of org memberships of a group user
+
+
+### POST - `/groups/{group_id}/memberships` - Added
+- Create a group membership for a user with role
+
+
+### GET - `/groups/{group_id}/memberships` - Added
+- Returns all memberships of the group
+
+
+### PATCH - `/groups/{group_id}/memberships/{membership_id}` - Added
+- Update a role from a group membership
+
+
+### DELETE - `/groups/{group_id}/memberships/{membership_id}` - Added
+- Deletes a membership from a group
+
 ## 2024-08-22
 
 ### GET - `/orgs/{org_id}/projects/{project_id}/sbom` - Updated

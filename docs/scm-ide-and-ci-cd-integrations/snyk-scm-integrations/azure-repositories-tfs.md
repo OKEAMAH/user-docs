@@ -128,11 +128,15 @@ The Integrations page shows all active integrations, including data from your ex
 3. Access Token (`mandatory`): Create your Azure DevOps PAT from your Azure DevOps settings. Follow the instructions from the  [Generate a Personal access token from your Azure DevOps settings](azure-repositories-tfs.md#generate-a-personal-access-token-from-your-azure-devops-settings) section.
 
 {% hint style="info" %}
-If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-configuration/snyk-broker/snyk-broker-apprisk.md) page.
+If you want to use the Broker Token follow the instructions from the [Snyk Broker AppRisk](../../enterprise-setup/snyk-broker/snyk-broker-apprisk.md) page.
 {% endhint %}
 
 4. API URL (`mandatory`): The API URL, for example, [`https://dev.azure.com/`](https://dev.azure.com/). You can use a custom URL that is publicly accessible.
-5. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations.md) page.
+5. Add Backstage Catalog (`optional`): If you want to add your Backstage catalog, follow the instructions from the [Backstage file for SCM Integrations](application-context-for-scm-integrations/) page.
+
+{% hint style="warning" %}
+The following PAT token permissions requirements are for Snyk AppRisk integrations. For SCM integration, see the [Azure Respositories (TFS) permissions requirements](./#azure-repositories-tfs-permission-requirements) on the Snyk SCM integrations pages.
+{% endhint %}
 
 #### Generate a Personal access token from your Azure DevOps settings
 
@@ -145,7 +149,7 @@ If you want to use the Broker Token follow the instructions from the [Snyk Broke
      * **Graph** - read
      * **Analytics** - read
      * **Release** - read
-     * **Security** - manage
+     * **Member Entitlement Management** - read
    * Organization - Select **All accessible organizations** or a specific organization.
 4. Set the expiration to 12 months.
 5. Copy the generated personal access token and share it through a secured vault.

@@ -2,9 +2,9 @@
 
 Configuring SSO may be done while onboarding Projects, creating Organization structure, or even while configuring integrations. Disable notifications for the Organizations if your intent is to add users prior to onboarding your Projects into Snyk.&#x20;
 
-Setting up [Single Sign On with Snyk](../../../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/) gives your users a consistent way of logging in to your application while increasing your ability to control who has access to your Organizations.
+Setting up [Single Sign On with Snyk](../../../enterprise-setup/single-sign-on-sso-for-authentication-to-snyk/) gives your users a consistent way of logging in to your application while increasing your ability to control who has access to your Organizations.
 
-In most cases, Snyk recommends using the [Self-Serve Single Sign-On option](../../../enterprise-configuration/single-sign-on-sso-for-authentication-to-snyk/configure-self-serve-single-sign-on-sso/) that allows you to configure a SAML connection to your identity provider. This allows you to configure the email domains that are valid, and also the default permissions that new users will have in your Organizations.
+In most cases, Snyk recommends using the [Self-Serve Single Sign-On option](../../../enterprise-setup/single-sign-on-sso-for-authentication-to-snyk/configure-self-serve-single-sign-on-sso/) that allows you to configure a SAML connection to your identity provider. This allows you to configure the email domains that are valid, and also the default permissions that new users will have in your Organizations.
 
 ## How to get assistance
 
@@ -16,9 +16,9 @@ Using this option requires paid professional services and cannot be completed us
 
 ## How to provision users through the API
 
-The [Provision user endpoints](https://docs.snyk.io/snyk-admin/manage-users-in-organizations-and-groups/provision-users-to-orgs-using-the-snyk-api-v1) in the Snyk API v1 allow you to grant Organization-level access and permissions to users before they log in to the Snyk platform.&#x20;
+The [Provision user endpoints](https://docs.snyk.io/snyk-admin/manage-users-in-organizations-and-groups/provision-users-to-orgs-using-the-snyk-api-v1) in the Snyk API allow you to grant Organization-level access and permissions to users before they log in to the Snyk platform.&#x20;
 
 API provisioning also allows you to limit Organization access and assign custom member roles. This allows you to control:
 
 * Which role is assigned to each user
-* Which Organizations each user should have access to.&#x20;
+* Which Organizations each user should have access to

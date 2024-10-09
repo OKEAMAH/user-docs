@@ -33,8 +33,8 @@ If your Projects reference private dependencies in these repositories but you ar
 
 For more information, see the following:
 
-* Package registry integrations: [npm Teams and npm Enterprise](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/npm-teams-and-npm-enterprise-integration.md), [Artifactory Registry setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/artifactory-package-repository-connection-setup/) and [Nexus Repository Manager setup](../../scan-using-snyk/snyk-open-source/scan-open-source-libraries-and-licenses/package-repository-integrations/nexus-repository-manager-connection-setup/).
-* Gatekeeper plugins: [Artifactory Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) and [Nexus Repository Manager Gatekeeper plugin](../../scan-using-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md)
+* Package registry integrations: [npm Teams and npm Enterprise](../../scan-with-snyk/snyk-open-source/package-repository-integrations/npm-teams-and-npm-enterprise-integration.md), [Artifactory Registry setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/artifactory-package-repository-connection-setup/) and [Nexus Repository Manager setup](../../scan-with-snyk/snyk-open-source/package-repository-integrations/nexus-repository-manager-connection-setup/).
+* Gatekeeper plugins: [Artifactory Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/artifactory-gatekeeper-plugin.md) and [Nexus Repository Manager Gatekeeper plugin](../../scan-with-snyk/snyk-open-source/manage-vulnerabilities/gatekeeper-plugins/nexus-repository-manager-gatekeeper-plugin.md)
 
 ## Language and package manager considerations
 
@@ -86,11 +86,11 @@ Not officially supported, but if configured with Yarn workspaces, you may get Sn
 
 ### Unmanaged JavaScript
 
-If you are on the Enterprise plan, and thus have access to the Snyk API, and you can get a full list of dependencies and their transitive dependencies, you have several API options.&#x20;
+If you are on the Enterprise plan and thus have access to the Snyk API, can use the API to get a full list of dependencies and their transitive dependencies.
 
-To test for vulnerabilities, you can use the following options:
+To test for vulnerabilities, you can use the following API endpoints:
 
-* [Test package json and yarn lock File](../../snyk-api/reference/test-v1.md#test-yarn)
+* [Test for issues in a public package by name and version](../../snyk-api/reference/test-v1.md#test-npm-packagename-version)
 * [Test Dep Graph](../../snyk-api/reference/test-v1.md#test-dep-graph)
 * [List issues for a package](../../snyk-api/reference/issues.md#orgs-org\_id-packages-purl-issues)
 

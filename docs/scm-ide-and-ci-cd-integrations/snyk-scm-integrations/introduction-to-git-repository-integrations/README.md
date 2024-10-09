@@ -5,7 +5,7 @@ You can use Snyk functions to secure your application code, using [Snyk Code](..
 These functions are available at each point in the development process to test, fix, and monitor your code, as explained in the following sections.
 
 {% hint style="info" %}
-For additional introductory information about Git integrations, see the other articles in this section of the documentation and [Clone an integration across your Snyk Organizations](../../../enterprise-configuration/snyk-broker/clone-an-integration-across-your-snyk-organizations.md) in the Snyk Broker documentation.
+For additional introductory information about Git integrations, see the other articles in this section of the documentation and [Clone an integration across your Snyk Organizations](../../../enterprise-setup/snyk-broker/clone-an-integration-across-your-snyk-organizations.md) in the Snyk Broker documentation.
 {% endhint %}
 
 ## While developing
@@ -38,7 +38,7 @@ Snyk can again act as a “gate” when you are building the application, checki
 
 You can choose to report on issues, allowing the build to happen, or to stop the build if issues are encountered. You can also easily add criteria to this process, including exploitability, CVSS score, and whether a fix exists, thus focusing on fixing the issues that matter to you.
 
-Snyk provides a number of [Snyk tools](../../../scan-using-snyk/snyk-tools/) to help with this process.
+Snyk provides a number of [Snyk tools](../../../scan-with-snyk/snyk-tools/) to help with this process.
 
 ## Security gate and deploy
 

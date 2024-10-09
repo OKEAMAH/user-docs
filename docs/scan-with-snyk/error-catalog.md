@@ -814,7 +814,7 @@ We encountered a fatal error from Git while trying to clone your code using your
 
 * Your provided credentials are correct or not scoped too narrowly.
 * The branch you've asked us to clone exists.
-* The repository you've provided is accessible from the internet is you are not connected through a broker.
+* The repository you've provided is accessible from the internet and you are not connected through a broker.
 
 And try the operation again.
 
@@ -1094,6 +1094,14 @@ Your Organization has enabled or enforced SAML SSO after you authorized Snyk to 
 
 The error you're seeing is usually reproducible by attempting to do a `git clone` of your repository with incorrectly configured credentials.
 Verify your authentication configuration with your Git cloud provider and try again.
+
+{% hint style="warning" %}
+**Error has been deprecated**
+
+Reason: This error has been moved to a more generalized namespace to avoid repetition.
+
+Going forward, [SNYK-OS-8004](#snyk-os-8004) will be used instead.
+{% endhint %}
 
 **HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
 
@@ -1689,6 +1697,22 @@ The language or package manager is not supported. Please refer to the supported 
 **Help Links:**
 - [https://docs.snyk.io/scan-applications/supported-languages-and-frameworks/supported-languages-frameworks-and-feature-availability-overview#open-source-and-licensing-snyk-open-source](https://docs.snyk.io/scan-applications/supported-languages-and-frameworks/supported-languages-frameworks-and-feature-availability-overview#open-source-and-licensing-snyk-open-source)
 
+### [SNYK-OS-8004](#snyk-os-8004)
+
+#### OAuth re-authorization required
+
+Your code is cloned on an isolated environment using Git as it is required by Snyk to analyze its dependencies.
+
+Your Organization has enabled or enforced SAML SSO after you authorized Snyk to access your code, and a re-authentication is therefore required.
+
+The error you're seeing is usually reproducible by attempting to do a `git clone` of your repository with incorrectly configured credentials.
+Verify your authentication configuration with your Git cloud provider and try again.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on#about-oauth-apps-github-apps-and-saml-sso](https://docs.github.com/en/enterprise-cloud@latest/authentication/authenticating-with-saml-single-sign-on/about-authentication-with-saml-single-sign-on#about-oauth-apps-github-apps-and-saml-sso)
+
 ---
 # SBOM Export
 ### [SNYK-OS-9000](#snyk-os-9000)
@@ -2082,6 +2106,20 @@ This issue is unexpected, and the service will recover shortly. If the error sti
 
 
 ---
+# Policies
+### [SNYK-POLICY-0001](#snyk-policy-0001)
+
+#### Unable to apply a policy with an invalid configuration
+
+Snyk could not apply a policy whilst executing a test because the configuration for the policy was invalid.
+You may be able to fix the policy and try again.
+
+**HTTP Status:** [422](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422)
+
+**Help Links:**
+- [https://docs.snyk.io/manage-risk/policies](https://docs.snyk.io/manage-risk/policies)
+
+---
 # PRChecks
 ### [SNYK-PR-CHECK-0001](#snyk-pr-check-0001)
 
@@ -2428,4 +2466,4 @@ Snyk was unable to resolve a single target. Snyk found multiple targets configur
 **Help Links:**
 - [https://docs.snyk.io/snyk-admin/snyk-projects#target](https://docs.snyk.io/snyk-admin/snyk-projects#target)
 
---- Generated at 2024-08-26T08:18:08.355Z
+--- Generated at 2024-10-09T10:51:50.486Z

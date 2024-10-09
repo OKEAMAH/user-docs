@@ -21,10 +21,6 @@ To connect the Jira app to Snyk, you must be a [Snyk Organization administrator]
 
 To activate Security in Jira Cloud in Jira, navigate to **Project Settings > Features > Development > Security** and toggle **Security** **ON**.&#x20;
 
-{% hint style="warning" %}
-Ensure that the project is _**not**_ of type **Classic**. If you are unable to find **Features** in your project settings, this may be because the project type is **Classic**. In this case, the  project must be rebuilt or migrated to a newer version.
-{% endhint %}
-
 Ensure you have the following permission scopes in Jira, which are required for the integration to operate.
 
 <table><thead><tr><th width="344.5">Required scope in Jira</th><th>Purpose</th></tr></thead><tbody><tr><td>Write data to the host application</td><td>Synchronize vulnerabilities in Snyk with Jira so they appear in the Security tab in Jira.</td></tr><tr><td>Read data from the host application</td><td>Read vulnerabilities from Jira to optimize the issues synchronization process.</td></tr><tr><td>Delete data from the host application</td><td>Remove vulnerabilities from Jira when a Snyk Organization is removed from Jira. </td></tr></tbody></table>
@@ -67,6 +63,12 @@ Developers can now use the security feature to view recent vulnerabilities found
 {% hint style="info" %}
 Only security vulnerabilities will be shown on the Jira Security tab.
 {% endhint %}
+
+### Deleting a target or repository
+
+To delete a target or repository from Snyk that you have connected to Jira, you must first delete the container code repository in Jira, through the **Security** panel in each Jira Project. Then you can remove the target or repository from Snyk.
+
+<figure><img src="../../.gitbook/assets/2024-08-27_14-05-04.png" alt="Remove connected security containers in the Jira Security panel" width="335"><figcaption><p>Remove connected security containers in the Jira Security panel</p></figcaption></figure>
 
 ## Manage security vulnerabilities in Jira
 

@@ -35,7 +35,7 @@ See [Snyk SCM integrations](../../../scm-ide-and-ci-cd-integrations/snyk-scm-int
 If you have an on-premise Git repository, you must consider deploying [Snyk Broker](https://docs.snyk.io/snyk-admin/snyk-broker) for Snyk to communicate with your repositories.
 
 {% hint style="info" %}
-Enterprise customers can enable and manage [Snyk Broker](../../../enterprise-configuration/snyk-broker/) using the API.&#x20;
+Enterprise customers can enable and manage [Snyk Broker](../../../enterprise-setup/snyk-broker/) using the API.&#x20;
 
 [Paid services](../../../working-with-snyk/snyk-terms-of-support-and-services-glossary/) can be engaged to assist in Snyk Broker deployments.
 {% endhint %}
@@ -75,8 +75,8 @@ For complex environments, modules, and highly templated implementations, using t
 
 ### Container registry (CR) integrations
 
-Snyk also integrates with various [container registries](../../../scan-using-snyk/snyk-container/container-registry-integrations/) to enable you to import and monitor your containers for vulnerabilities. Snyk tests the containers you have imported for any known security vulnerabilities found, at a frequency you control.
+Snyk also integrates with various [container registries](../../../scan-with-snyk/snyk-container/container-registry-integrations/) to enable you to import and monitor your containers for vulnerabilities. Snyk tests the containers you have imported for any known security vulnerabilities found, at a frequency you control.
 
 ### Kubernetes
 
-Snyk can be configured to monitor workloads deployed to Kubernetes. See [Overview of Kubernetes integration](../../../scan-using-snyk/snyk-container/kubernetes-integration/overview-of-kubernetes-integration/) for more information on how to configure the controller.
+Snyk can be configured to monitor workloads deployed to Kubernetes. See [Overview of Kubernetes integration](../../../scan-with-snyk/snyk-container/kubernetes-integration/overview-of-kubernetes-integration/) for more information on how to configure the controller.
