@@ -17,7 +17,7 @@ A smooth deployment of Snyk in your company structure requires a planned rollout
 
 Snyk has Organization-level SCM integrations available, including GitHub, GitHub Enterprise, Bitbucket Cloud, and more.
 
-See [Set up an integration](../../../getting-started/quickstart/set-up-an-integration.md) for details.
+For details, see [Set up a Snyk integration](../../../getting-started/#set-up-a-snyk-integration).
 
 Snyk has Group-level SCM integrations available for Snyk AppRisk, including GitHub, GitLab, Azure DevOps, and Bitbucket.
 
@@ -51,7 +51,7 @@ Navigate to the **Projects** page in the Snyk UI, select **Add projects**, selec
 To confirm that a Project was imported, go to the **Add project** import page for the integration. Imported Projects are indicated by a ✔ next to the repository name.
 {% endhint %}
 
-See [Import a Project](../../../getting-started/quickstart/import-a-project.md) for more details.
+For details, see [Import a Project](../../../getting-started/#import-a-project-to-scan-and-identify-issues).
 
 ## Stage 3: Enable Snyk test on PRs
 
@@ -111,7 +111,7 @@ To configure the automatic fix PR settings for all Projects in an Organization, 
 
 <div align="center">
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt="Automatic fix pull request settings" width="563"><figcaption><p>Automatic fix pull request settings</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt="Automatic fix pull request settings" width="563"><figcaption><p>Automatic fix pull request settings</p></figcaption></figure>
 
 </div>
 
