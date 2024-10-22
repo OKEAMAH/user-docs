@@ -8,7 +8,17 @@ The Snyk Runtime Sensor is available in a Closed Beta state and applies only to 
 
 The Snyk Runtime Sensor is a [Kubernetes DaemonSet](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/) that watches your deployments on a Kubernetes cluster and sends the collected data to Snyk.
 
-The following [risk factors](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk#risk-factors) are reported from the Snyk Runtime Sensor: [Deployed](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-deployed), and [Loaded package](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-loaded-package) (only for application packages).
+The following [risk factors](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk#risk-factors) are reported from the Snyk Runtime Sensor: [Deployed](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-deployed) and [Loaded package](https://docs.snyk.io/manage-risk/prioritize-issues-for-fixing/assets-and-risk-factors-for-snyk-apprisk/risk-factor-loaded-package).
+
+{% hint style="info" %}
+The Snyk Runtime Sensor reports the Loaded package risk factor only for application packages. The following ecosystems are supported:
+
+* Node.js
+* Java
+* Python
+* Go
+* .NET
+{% endhint %}
 
 On this page, you can find the following information:
 
@@ -30,6 +40,7 @@ Ensure that your environment meets the following technical prerequisites to prop
 Managed Kubernetes services such as EKS Fargate or GKE Autopilot, are not supported, as the cluster nodes are managed by the cloud provider.
 {% endhint %}
 
+* CPU architecture - AMD64 or ARM64.
 * Linux kernel - version 5.8 or higher.
 * Privileged access - you need either root or the following Linux capabilities: `BPF`, `PERFMON`, `SYS_RESOURCES`, `DAC_READ_SEARCH`, `SYS_PTRACE`, `NET_ADMIN`
 * Cluster nodes must support BTF.
@@ -100,7 +111,7 @@ To install the Snyk runtime sensor using Helm Charts, you can follow these steps
     --set secretName=<<YOUR_SECRET_NAME>> \
     --set clusterName=<<CLUSTER_NAME>> \
     --set snykGroupId=<<YOUR_GROUP_ID>> \
-    --set snykAPIBaseURL=<<YOUR_REGIONS_API_URL>> \ # Optional
+    --set snykAPIBaseURL=api.<<REGION>>.snyk.io:443 \ # Optional
     -n snyk-runtime-sensor \
     runtime-sensor/runtime-sensor
     ```
@@ -195,7 +206,7 @@ Prerequisite: Install AWS Provider and CSI Secrets Store in your cluster, as ins
     --set secretName=snyk-runtime-sensor-secret \
     --set clusterName=<<CLUSTER_NAME>> \
     --set snykGroupId=<<YOUR_GROUP_ID>> \
-    --set snykAPIBaseURL=<<YOUR_REGIONS_API_URL>> \ # Optional
+    --set snykAPIBaseURL=api.<<REGION>>.snyk.io:443 \ # Optional
     -n snyk-runtime-sensor \
     runtime-sensor/runtime-sensor
     ```

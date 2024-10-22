@@ -1,5 +1,7 @@
 # CLI commands and options summary
 
+
+
 {% hint style="info" %}
 This page **only summarizes** the CLI commands and the options for each command. **For details, use the links in this summary to open the help** docs page for the command you are using. The help docs pages are the same as the help in the CLI.
 {% endhint %}
@@ -104,7 +106,7 @@ Find Log4Shell vulnerability.
 
 ### [`snyk policy`](https://docs.snyk.io/snyk-cli/commands/policy)
 
-generates a mapping artifact that contains the minimum amount of information needed to generate, from Terraform state files, resource mappings from code to Cloud, such as resource IDs and names, and sends the mapping artifact to Snyk.Display the `.snyk` policy for a package.
+Display the `.snyk` policy for a package.
 
 ### [`snyk sbom`](https://docs.snyk.io/snyk-cli/commands/sbom)
 
@@ -112,7 +114,7 @@ Generate an SBOM for a local software project in an ecosystem supported by Snyk.
 
 ### [`snyk sbom test`](https://docs.snyk.io/snyk-cli/commands/sbom-test)
 
-Checks an SBOM for vulnerabilities in open-source packages.
+Check an SBOM for vulnerabilities in o pen-source packages.
 
 ## New CLI commands
 
@@ -144,7 +146,7 @@ You can use environment variables to configure the Snyk CLI and also set variabl
 
 ## Debug
 
-Use `-d` option to output the debug logs for any command.
+See [Debugging the Snyk CLI](debugging-the-snyk-cli.md) for detailed information about the `--d` option.
 
 ## Exit codes for CLI commands
 

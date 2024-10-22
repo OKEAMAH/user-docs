@@ -61,7 +61,7 @@ Snyk Code supports many [languages and frameworks](../../supported-languages-pac
 
 ## What's next?
 
-* [Create or log in to a Snyk account](../../getting-started/quickstart/create-or-log-in-to-a-snyk-account.md)
-* [Set up an integration](../../getting-started/quickstart/set-up-an-integration.md)
-* [Import a Project](../../getting-started/quickstart/import-a-project.md)
+* [Create or log in to a Snyk account](../../getting-started/#create-or-log-in-to-a-snyk-account)
+* [Set up an integration](../../getting-started/#set-up-a-snyk-integration)
+* [Import a Project](../../getting-started/#import-a-project-to-scan-and-identify-issues)
 * [Configure Snyk Code in Snyk Web UI](configure-snyk-code.md)
