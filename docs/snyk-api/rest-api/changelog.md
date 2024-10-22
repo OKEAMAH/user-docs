@@ -1,3 +1,603 @@
+## 2024-10-15
+
+### GET - `/tenants/{tenant_id}/memberships` - Added
+- Returns all memberships of the tenant
+
+
+### PATCH - `/tenants/{tenant_id}/memberships/{membership_id}` - Added
+- Update the tenant membership with the new role
+
+
+
+### DELETE - `/tenants/{tenant_id}/memberships/{membership_id}` - Added
+- Delete an individual tenant membership for a single user.
+
+
+### GET - `/self/apps` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/self/apps/{app_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/self/apps/{app_id}/sessions` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/self/apps/{app_id}/sessions/{session_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/self/apps/installs` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/self/apps/installs/{install_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/self/access_requests` - Added
+- Get a list of user`s access requests
+
+
+### GET - `/orgs/{org_id}` - Updated
+- the response property `data/attributes` became optional for the status `200`
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the optional property `data/attributes/access_requests_enabled` from the response with the `200` status
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the optional property `data/attributes/created_at` from the response with the `200` status
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the optional property `data/attributes/updated_at` from the response with the `200` status
+![Badge](https://img.shields.io/badge/Breaking-yellow)
+- removed the non-success response with the status `409`
+
+- added the optional property `links/first` to the response with the `200` status
+
+- added the optional property `links/last` to the response with the `200` status
+
+- added the optional property `links/next` to the response with the `200` status
+
+- added the optional property `links/prev` to the response with the `200` status
+
+- added the optional property `links/related` to the response with the `200` status
+
+- the response property `data` became required for the status `200`
+
+- the response property `jsonapi` became required for the status `200`
+
+- the response property `links` became required for the status `200`
+
+- the `data/type` response`s property pattern `^[a-z][a-z0-9]*(_[a-z][a-z0-9]*)*$` was removed for the status `200`
+
+
+
+### GET - `/orgs/{org_id}/users/{id}` - Added
+- Get a summary of user.
+
+Note that Service Accounts are not returned by this endpoint. Please use the Service Accounts endpoints.
+
+
+
+### POST - `/orgs/{org_id}/sbom_tests` - Added
+- Create an SBOM test run by supplying an SBOM document. The components contained in the given document will get analyzed for known vulnerabilities. In order for component identification to be successful, they must have a PackageURL (purl) of a supported purl type assigned. Analysis will be skipped for any component that does not fulfill this requirement.
+Supported SBOM formats: CycloneDX 1.4 JSON, CycloneDX 1.5 JSON, CycloneDX 1.6 JSON, SPDX 2.3 JSON
+Supported purl types: apk, deb, cargo, cocoapods, composer, gem, generic, golang, hex, maven, npm, nuget, pypi, rpm, swift
+
+
+
+### GET - `/orgs/{org_id}/sbom_tests/{job_id}` - Added
+- Get an SBOM test run status
+
+
+### GET - `/orgs/{org_id}/sbom_tests/{job_id}/results` - Added
+- Get an SBOM test run result
+
+
+### GET - `/orgs/{org_id}/projects` - Updated
+- added `#/components/schemas/ProjectRelationshipsTarget` to the `data/items/relationships/target` response property `oneOf` list for the response status `200`
+
+- removed `#/components/schemas/ProjectRelationshipsTarget20230215` from the `data/items/relationships/target` response property `oneOf` list for the response status `200`
+
+
+
+### PATCH - `/orgs/{org_id}/projects/{project_id}` - Updated
+- added `#/components/schemas/ProjectRelationshipsTarget` to the `data/relationships/target` response property `oneOf` list for the response status `200`
+
+- removed `#/components/schemas/ProjectRelationshipsTarget20230215` from the `data/relationships/target` response property `oneOf` list for the response status `200`
+
+
+
+### GET - `/orgs/{org_id}/projects/{project_id}` - Updated
+- added `#/components/schemas/ProjectRelationshipsTarget` to the `data/relationships/target` response property `oneOf` list for the response status `200`
+
+- removed `#/components/schemas/ProjectRelationshipsTarget20230215` from the `data/relationships/target` response property `oneOf` list for the response status `200`
+
+
+
+### GET - `/orgs/{org_id}/packages/{purl}/issues` - Updated
+- removed `#/components/schemas/ResourcePathRepresentation, #/components/schemas/PackageRepresentation` from the `data/items/attributes/coordinates/items/representations/items/` response property `anyOf` list for the response status `200`
+
+
+
+### POST - `/orgs/{org_id}/packages/issues` - Updated
+- removed `#/components/schemas/ResourcePathRepresentation, #/components/schemas/PackageRepresentation` from the `data/items/attributes/coordinates/items/representations/items/` response property `anyOf` list for the response status `200`
+
+
+
+### GET - `/orgs/{org_id}/learn/assignments` - Added
+- Allows an admin to obtain a comprehensive list of all assignments within their organization.
+
+
+### DELETE - `/orgs/{org_id}/learn/assignments` - Added
+- Allows an admin to delete multiple assignments within their organization.
+
+
+### POST - `/orgs/{org_id}/cloud/scans` - Added
+- Create and trigger a new scan for an environment
+
+
+### GET - `/orgs/{org_id}/cloud/scans` - Added
+- List scans for an organization
+
+
+### GET - `/orgs/{org_id}/cloud/scans/{scan_id}` - Added
+- Get a single scan for an organization
+
+
+### GET - `/orgs/{org_id}/cloud/resources` - Added
+- List resources for an organization
+
+
+### POST - `/orgs/{org_id}/cloud/permissions` - Added
+- Generate IAC template for Snyk to access your cloud resources
+
+
+### POST - `/orgs/{org_id}/cloud/environments` - Added
+- Create a new environment and run a scan
+
+
+### GET - `/orgs/{org_id}/cloud/environments` - Added
+- List environments for an organization
+
+
+### PATCH - `/orgs/{org_id}/cloud/environments/{environment_id}` - Added
+- Update an environment
+
+
+### DELETE - `/orgs/{org_id}/cloud/environments/{environment_id}` - Added
+- Delete an environment
+
+
+### POST - `/orgs/{org_id}/apps` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/apps` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### PATCH - `/orgs/{org_id}/apps/{client_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/apps/{client_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/orgs/{org_id}/apps/{client_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/orgs/{org_id}/apps/{client_id}/secrets` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/orgs/{org_id}/apps/installs` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/apps/installs` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/orgs/{org_id}/apps/installs/{install_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/orgs/{org_id}/apps/installs/{install_id}/secrets` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/orgs/{org_id}/apps/creations` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/apps/creations` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### PATCH - `/orgs/{org_id}/apps/creations/{app_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/apps/creations/{app_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/orgs/{org_id}/apps/creations/{app_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/orgs/{org_id}/apps/creations/{app_id}/secrets` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/orgs/{org_id}/app_bots` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/orgs/{org_id}/app_bots/{bot_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/learn/catalog` - Added
+- List Snyk Learn`s catalog resources
+
+
+### GET - `/groups` - Added
+- Returns a list of groups which a user is a member of
+
+
+### GET - `/groups/{group_id}` - Added
+- Returns a group by its ID
+
+
+### PATCH - `/groups/{group_id}/users/{id}` - Added
+- Update a user`s membership of the group. 
+
+To remove a user`s membership, provide `null` as the membership parameter (see example).
+
+At present, only removing memberships is supported by this endpoint. To update a user`s group membership, please use
+the UI or legacy API.
+
+
+
+### GET - `/groups/{group_id}/sso_connections` - Added
+- Returns a list of SSO connections for a group
+
+
+### GET - `/groups/{group_id}/sso_connections/{sso_id}/users` - Added
+- Returns a list of users for a SSO connection
+
+
+### DELETE - `/groups/{group_id}/sso_connections/{sso_id}/users/{user_id}` - Added
+- Deletes a user from a Group SSO connection
+
+
+### POST - `/groups/{group_id}/apps/installs` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### GET - `/groups/{group_id}/apps/installs` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### DELETE - `/groups/{group_id}/apps/installs/{install_id}` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
+
+### POST - `/groups/{group_id}/apps/installs/{install_id}/secrets` - Updated
+- added the optional property `errors/items/links` to the response with the `400` status
+
+- added the optional property `errors/items/links` to the response with the `401` status
+
+- added the optional property `errors/items/links` to the response with the `403` status
+
+- added the optional property `errors/items/links` to the response with the `404` status
+
+- added the optional property `errors/items/links` to the response with the `409` status
+
+- added the optional property `errors/items/links` to the response with the `500` status
+
+
 ## 2024-08-25 - Updated 2024-10-22
 
 ### GET - `/self` - Updated
